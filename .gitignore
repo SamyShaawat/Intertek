@@ -64,4 +64,4 @@ test-results/
 # Log files and linter cache
 *.log
 .eslintcache
-
+*.wolf
