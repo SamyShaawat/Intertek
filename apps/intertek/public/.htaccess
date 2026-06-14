@@ -1,0 +1,24 @@
+# Apache server configuration for single page React app routing (Vite + React Router)
+# Suitable for cPanel, Hostinger, and WHM shared environments
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # For root-level deployment (e.g., public_html/ or app.domain.com/):
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+
+  # NOTE FOR SUBDIRECTORY DEPLOYMENT:
+  # If you deploy to a subdirectory like public_html/intertek/ (domain.com/intertek/):
+  # 1. Comment out the active block above.
+  # 2. Uncomment the block below and replace "/intertek/" with your subdirectory path:
+  #
+  # RewriteBase /intertek/
+  # RewriteRule ^index\.html$ - [L]
+  # RewriteCond %{REQUEST_FILENAME} !-f
+  # RewriteCond %{REQUEST_FILENAME} !-d
+  # RewriteRule . /intertek/index.html [L]
+</IfModule>

@@ -1,0 +1,10 @@
+{
+  "name": "@intertek-ws/intertek-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@intertek-ws/intertek"
+    ]
+  }
+}
