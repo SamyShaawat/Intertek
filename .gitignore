@@ -66,3 +66,7 @@ test-results/
 *.log
 .eslintcache
 *.wolf
+.agents/*
+.claude/*
+.wolf/*
+graphify-out/*
