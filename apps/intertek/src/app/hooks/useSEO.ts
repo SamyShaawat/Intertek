@@ -10,8 +10,8 @@ export interface SEOProps {
 
 export function useSEO({ title, description, keywords, ogTitle, ogDescription }: SEOProps) {
   useEffect(() => {
-    document.title = `${title} | Intertek Total Quality Assurance`;
-    
+    document.title = `${title} | Intertek Group`;
+
     const updateMeta = (name: string, content: string) => {
       let element = document.querySelector(`meta[name="${name}"]`);
       if (!element) {
