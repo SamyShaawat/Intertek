@@ -2,6 +2,7 @@
   "name": "@intertek-ws/source",
   "version": "0.0.0",
   "license": "MIT",
+  "packageManager": "pnpm@10.15.1",
   "scripts": {},
   "private": true,
   "dependencies": {
@@ -52,8 +53,5 @@
     "typescript-eslint": "^8.40.0",
     "vite": "^8.0.0",
     "vitest": "~4.1.0"
-  },
-  "workspaces": [
-    "apps/*"
-  ]
+  }
 }

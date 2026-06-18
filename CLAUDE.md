@@ -92,10 +92,10 @@ When working on tasks, act as:
 
 ## Package Manager & Monorepo
 
-This is an **Nx monorepo** using **npm**. Always use `npm` for package operations and `nx` to run tasks — never invoke underlying tooling (vite, vitest, playwright) directly.
+This is an **Nx monorepo** using **pnpm**. Always use `pnpm` for package operations and `nx` to run tasks — never invoke underlying tooling (vite, vitest, playwright) directly.
 
 - **NEVER run `npm install`** unless explicitly requested.
-- Use `npx nx run <project>:<target>` or `npx nx run-many --target=<target>` for all build/serve/test/lint tasks.
+- Use `pnpm exec nx run <project>:<target>` or `pnpm exec nx run-many --target=<target>` for all build/serve/test/lint tasks.
 
 ---
 
@@ -103,37 +103,37 @@ This is an **Nx monorepo** using **npm**. Always use `npm` for package operation
 
 ```bash
 # Dev server — http://localhost:4700
-npx nx serve intertek
+pnpm exec nx serve intertek
 
 # Production build (outputs to apps/intertek/dist/)
-npx nx build intertek
+pnpm exec nx build intertek
 
 # Build with subdirectory base path for shared hosting
-BASE_PATH=/intertek/ npx nx build intertek
+BASE_PATH=/intertek/ pnpm exec nx build intertek
 
 # Testing
-npx nx test intertek                  # Vitest unit tests (jsdom)
-npx nx e2e intertek-e2e               # Playwright E2E tests
+pnpm exec nx test intertek                  # Vitest unit tests (jsdom)
+pnpm exec nx e2e intertek-e2e               # Playwright E2E tests
 
 # Run a single unit test file
-npx nx test intertek --testFile=apps/intertek/src/app/app.spec.tsx
+pnpm exec nx test intertek --testFile=apps/intertek/src/app/app.spec.tsx
 
 # Type checking & linting
-npx nx typecheck intertek
-npx nx lint intertek
+pnpm exec nx typecheck intertek
+pnpm exec nx lint intertek
 
 # Run all targets across all projects
-npx nx run-many --target=lint
-npx nx run-many --target=typecheck
+pnpm exec nx run-many --target=lint
+pnpm exec nx run-many --target=typecheck
 ```
 
 ### CI Checks (run locally before pushing to `main`)
 ```bash
-npm ci
-npx nx build intertek
-npx nx test intertek
-npx nx lint intertek
-npx nx typecheck intertek
+pnpm install --frozen-lockfile
+pnpm exec nx build intertek
+pnpm exec nx test intertek
+pnpm exec nx lint intertek
+pnpm exec nx typecheck intertek
 ```
 
 ---
@@ -257,7 +257,7 @@ Always check `app.tsx` first — it likely already contains the component or dat
 ### E2E Tests (Playwright)
 - Test files: `apps/intertek-e2e/src/*.spec.ts`.
 - Playwright config: `apps/intertek-e2e/playwright.config.ts`.
-- E2E tests require the dev server to be running (`npx nx serve intertek`).
+- E2E tests require the dev server to be running (`pnpm exec nx serve intertek`).
 
 ### AAA Pattern
 ```typescript

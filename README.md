@@ -11,19 +11,19 @@
 To run the dev server for your app, use:
 
 ```sh
-npx nx serve intertek
+pnpm exec nx serve intertek
 ```
 
 To create a production bundle:
 
 ```sh
-npx nx build intertek
+pnpm exec nx build intertek
 ```
 
 To see all available targets to run for a project, run:
 
 ```sh
-npx nx show project intertek
+pnpm exec nx show project intertek
 ```
 
 These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
@@ -39,16 +39,16 @@ Use the plugin's generator to create new projects.
 To generate a new application, use:
 
 ```sh
-npx nx g @nx/react:app demo
+pnpm exec nx g @nx/react:app demo
 ```
 
 To generate a new library, use:
 
 ```sh
-npx nx g @nx/react:lib mylib
+pnpm exec nx g @nx/react:lib mylib
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+You can use `pnpm exec nx list` to get a list of installed plugins. Then, run `pnpm exec nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
 
 [Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
@@ -59,7 +59,7 @@ You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx 
 To connect to Nx Cloud, run the following command:
 
 ```sh
-npx nx connect
+pnpm exec nx connect
 ```
 
 Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
@@ -74,7 +74,7 @@ Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/
 Use the following command to configure a CI workflow for your workspace:
 
 ```sh
-npx nx g ci-workflow
+pnpm exec nx g ci-workflow
 ```
 
 [Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
