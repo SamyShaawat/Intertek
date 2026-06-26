@@ -1,6 +1,13 @@
 import { Component, useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import { Footer } from './components/Footer';
+import { SiteHeader } from './components/SiteHeader';
+import { ROUTES } from './constants/routes';
+import { AboutPage } from './pages/AboutPage';
+import { ContactPage } from './pages/ContactPage';
+import { HomePage } from './pages/HomePage';
+import { ServicesPage } from './pages/ServicesPage';
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
   override state = { error: null };
@@ -20,13 +27,6 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | 
     return this.props.children;
   }
 }
-import { Footer } from './components/Footer';
-import { SiteHeader } from './components/SiteHeader';
-import { ROUTES } from './constants/routes';
-import { AboutPage } from './pages/AboutPage';
-import { ContactPage } from './pages/ContactPage';
-import { HomePage } from './pages/HomePage';
-import { ServicesPage } from './pages/ServicesPage';
 
 function AppShell() {
   const [mobileOpen, setMobileOpen] = useState(false);

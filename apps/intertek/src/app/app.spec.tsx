@@ -13,15 +13,12 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have the dashboard title', () => {
+  it('should render the brand name', () => {
     const { getAllByText } = render(
       <BrowserRouter>
         <App />
       </BrowserRouter>,
     );
-    expect(
-      getAllByText(new RegExp('Quality Assurance Portal', 'gi')).length >
-        0,
-    ).toBeTruthy();
+    expect(getAllByText(new RegExp('Intertek Group', 'gi')).length > 0).toBeTruthy();
   });
 });
