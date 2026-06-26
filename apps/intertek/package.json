@@ -12,6 +12,6 @@
     "vite": "^8.0.0"
   },
   "scripts": {
-    "doctor": "npx react-doctor@latest"
+    "doctor": "react-doctor"
   }
 }

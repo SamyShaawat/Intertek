@@ -5,23 +5,9 @@ import { HeroBanner } from '../components/HeroBanner';
 import { PageWrapper } from '../components/PageWrapper';
 import { SectionKicker } from '../components/SectionKicker';
 import { OfficeCard } from '../components/OfficeCard';
-import { locations, offices } from './data';
+import { locations, offices, services } from './data';
 
-const SERVICE_OPTIONS = [
-  "Ships' Registration",
-  "Offshore Corporates' Registration",
-  'Mortgages Registration',
-  'Crew Documentation & Endorsement',
-  'Class H&M Services & Consultancy',
-  'Statutory Services & Consultancy',
-  'Naval Architecture & Consultancy',
-  'ISM & ISPS Services and Consultancy',
-  'Third Party Marine Surveys',
-  'Pre/Post-PSC Inspections',
-  'Incident & Near-Miss Response Attendance',
-  'MLC Crew Welfare Inspections',
-  'Other',
-];
+const SERVICE_OPTIONS = [...services.map((service) => service.title), 'Other'];
 
 type FormData = {
   company: string;
