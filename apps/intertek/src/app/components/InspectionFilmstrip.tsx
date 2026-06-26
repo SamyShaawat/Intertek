@@ -14,10 +14,13 @@ const track = [...images, ...images];
 
 export function InspectionFilmstrip() {
   return (
-    <div className="border-t-4 border-brand-red overflow-hidden">
-      <div className="filmstrip-track flex h-52 sm:h-60 w-max gap-1">
+    <div className="overflow-hidden border-t border-white/60 bg-white/40">
+      <div className="filmstrip-track flex h-52 w-max gap-2 py-2 sm:h-60">
         {track.map((img, i) => (
-          <div key={i} className="relative w-64 shrink-0 overflow-hidden rounded-sm sm:w-72">
+          <div
+            key={i}
+            className="relative w-64 shrink-0 overflow-hidden rounded-[1.15rem] border border-white/70 bg-white shadow-[0_14px_30px_rgba(10,28,52,0.08)] sm:w-72"
+          >
             <img
               src={img.src}
               alt={img.alt}

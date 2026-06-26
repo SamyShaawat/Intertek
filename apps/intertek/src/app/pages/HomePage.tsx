@@ -42,7 +42,7 @@ export function HomePage() {
         </section>
 
         <section className="grid gap-5 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-[2.25rem] border border-white/70 bg-white/86 p-6 shadow-[0_16px_50px_rgba(10,28,52,0.08)] backdrop-blur-xl sm:p-8">
             <SectionKicker text="What we do" />
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {services.slice(0, 6).map((service) => (
@@ -51,8 +51,8 @@ export function HomePage() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-[#0b1f3b] shadow-sm">
-            <div className="grid h-full gap-0 lg:grid-cols-[0.92fr_1.08fr]">
+          <div className="overflow-hidden rounded-[2.25rem] border border-brand-navy/10 bg-brand-navy shadow-[0_20px_70px_rgba(10,28,52,0.16)]">
+            <div className="grid h-full gap-0 lg:grid-cols-[0.95fr_1.05fr]">
               <div className="space-y-5 p-6 text-white sm:p-8">
                 <SectionKicker text="Our approach" light />
                 <h2 className="max-w-md text-3xl font-black leading-tight tracking-tight">
@@ -63,7 +63,7 @@ export function HomePage() {
                 </p>
                 <Link
                   to={ROUTES.ABOUT}
-                  className="inline-flex w-fit rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#0b1f3b] shadow-sm"
+                  className="inline-flex w-fit rounded-full bg-white px-5 py-3 text-sm font-semibold text-brand-navy shadow-[0_12px_30px_rgba(0,0,0,0.14)] transition-all hover:-translate-y-0.5 hover:bg-brand-red hover:text-white"
                 >
                   See company profile
                 </Link>
@@ -71,7 +71,7 @@ export function HomePage() {
               <img
                 src="/img/IG PHOTOS/marine-inspection-015.jpg"
                 alt="Surveyors conducting vessel inspection"
-                className="h-64 w-full object-cover lg:h-full"
+                className="h-64 w-full object-cover object-[center_32%] lg:h-full"
               />
             </div>
           </div>
@@ -86,10 +86,10 @@ export function HomePage() {
           <ImageMosaic images={homeImages} />
         </section>
 
-        <section className="grid gap-5 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm lg:grid-cols-[0.9fr_1.1fr] sm:p-8">
+        <section className="grid gap-5 rounded-[2.25rem] border border-white/70 bg-white/86 p-6 shadow-[0_16px_50px_rgba(10,28,52,0.08)] backdrop-blur-xl lg:grid-cols-[0.9fr_1.1fr] sm:p-8">
           <div className="space-y-4">
             <SectionKicker text="Group structure" />
-            <h2 className="text-3xl font-black tracking-tight text-[#0b1f3b]">Three entities. One operating standard.</h2>
+            <h2 className="text-3xl font-black tracking-tight text-brand-navy">Three entities. One operating standard.</h2>
             <p className="max-w-xl text-sm leading-7 text-slate-600">
               Legal Marine Tek, Intertek Maritime Bureau, and Intertek Maritime Middle East operate independently — bound by the same quality mandate and leadership team.
             </p>

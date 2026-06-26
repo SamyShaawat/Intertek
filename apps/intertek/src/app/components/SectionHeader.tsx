@@ -15,10 +15,13 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={className}>
-      <div className={`w-10 h-1 rounded-full mb-4 ${accent === 'red' ? 'bg-brand-red' : 'bg-brand-blue'}`} aria-hidden="true" />
-      <Tag className="text-3xl md:text-4xl font-black text-white tracking-tight">{title}</Tag>
+      <div
+        className={`mb-4 h-1 w-10 rounded-full ${accent === 'red' ? 'bg-brand-red' : 'bg-brand-blue'}`}
+        aria-hidden="true"
+      />
+      <Tag className="text-3xl font-black tracking-tight text-brand-navy md:text-4xl">{title}</Tag>
       {subtitle && (
-        <p className="text-slate-400 mt-2 text-sm md:text-base max-w-2xl leading-relaxed">{subtitle}</p>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate-600 md:text-base">{subtitle}</p>
       )}
     </div>
   );

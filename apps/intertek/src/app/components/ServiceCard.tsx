@@ -13,18 +13,18 @@ const CATEGORY_COLORS: Record<ServiceCategory, { chip: string; dot: string }> = 
 export function ServiceCard({ service }: { service: Service }) {
   const colors = CATEGORY_COLORS[service.category];
   return (
-    <div className="group rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+    <div className="group rounded-[1.5rem] border border-white/70 bg-white/88 p-4 shadow-[0_14px_40px_rgba(10,28,52,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/15 hover:shadow-[0_18px_48px_rgba(10,28,52,0.1)]">
       <Chip
         size="sm"
         variant="soft"
-        className={`${colors.chip} text-[10px] font-semibold uppercase tracking-[0.22em] h-5 px-2`}
+        className={`${colors.chip} h-6 px-2 text-[10px] font-semibold uppercase tracking-[0.22em]`}
       >
         <span className="inline-flex items-center gap-1.5">
           <span className={`inline-block h-1.5 w-1.5 rounded-full ${colors.dot} shrink-0`} />
           {service.category}
         </span>
       </Chip>
-      <p className="mt-3 break-words text-sm font-semibold leading-6 text-slate-800">{service.title}</p>
+      <p className="mt-3 break-words text-sm font-semibold leading-6 text-brand-navy">{service.title}</p>
     </div>
   );
 }

@@ -30,7 +30,7 @@ export function ServicesPage() {
 
       <PageWrapper>
         <section className="grid gap-5 lg:grid-cols-[1fr_0.85fr]">
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-[2.25rem] border border-white/70 bg-white/86 p-6 shadow-[0_16px_50px_rgba(10,28,52,0.08)] backdrop-blur-xl sm:p-8">
             <SectionKicker text="Service matrix" />
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {services.map((service) => (
@@ -40,18 +40,18 @@ export function ServicesPage() {
           </div>
 
           <div className="grid gap-5">
-            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
+            <div className="overflow-hidden rounded-[2.25rem] border border-white/70 bg-white shadow-[0_16px_50px_rgba(10,28,52,0.08)]">
               <img
                 src="/img/IG PHOTOS/marine-inspection-011.jpg"
                 alt="Marine survey in progress"
                 className="aspect-[4/3] w-full object-cover object-[center_20%]"
               />
             </div>
-            <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+            <div className="rounded-[2.25rem] border border-white/70 bg-white/86 p-6 shadow-[0_16px_50px_rgba(10,28,52,0.08)] backdrop-blur-xl">
               <SectionKicker text="Service scope" />
               <div className="mt-4 grid gap-3">
                 {serviceHighlights.map((item) => (
-                  <div key={item} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">
+                  <div key={item} className="rounded-2xl border border-brand-navy/8 bg-[linear-gradient(180deg,rgba(27,93,191,0.04),rgba(255,255,255,0.92))] px-4 py-3 text-sm font-medium text-brand-navy">
                     {item}
                   </div>
                 ))}

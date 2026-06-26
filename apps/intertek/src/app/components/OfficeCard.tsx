@@ -3,10 +3,10 @@ import type { Office } from '../pages/data';
 
 export function OfficeCard({ office }: { office: Office }) {
   return (
-    <Card className="flex h-full flex-col rounded-[1.75rem] border border-slate-200 bg-white">
+    <Card className="flex h-full flex-col rounded-[1.75rem] border border-white/70 bg-white/88 shadow-[0_16px_50px_rgba(10,28,52,0.08)] backdrop-blur-xl">
       <Card.Content className="flex flex-col p-5">
         <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 p-1.5">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-brand-navy/8 bg-white p-1.5 shadow-[0_10px_24px_rgba(10,28,52,0.06)]">
             <img src="/img/branding/intertek-group-mark.png" alt="" aria-hidden="true" className="h-full w-full object-contain" />
           </div>
           <div className="min-w-0">
@@ -22,7 +22,7 @@ export function OfficeCard({ office }: { office: Office }) {
         </div>
         <a
           href={`mailto:${office.email}`}
-          className="mt-auto pt-4 self-start text-xs font-semibold text-brand-navy hover:underline"
+          className="mt-auto self-start pt-4 text-xs font-semibold text-brand-navy transition-colors hover:text-brand-blue hover:underline"
         >
           {office.email}
         </a>

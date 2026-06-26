@@ -3,9 +3,9 @@ import type { Subsidiary } from '../pages/data';
 
 export function SubsidiaryCard({ subsidiary }: { subsidiary: Subsidiary }) {
   return (
-    <Card className="rounded-[2rem] border border-slate-200 bg-white">
+    <Card className="rounded-[2rem] border border-white/70 bg-white/88 shadow-[0_16px_50px_rgba(10,28,52,0.08)] backdrop-blur-xl">
       <Card.Content className="p-6">
-        <div className="flex h-24 items-center justify-center overflow-hidden rounded-2xl border border-slate-100 bg-slate-50 px-4 py-4">
+        <div className="flex h-28 items-center justify-center overflow-hidden rounded-[1.4rem] border border-brand-navy/8 bg-[linear-gradient(180deg,rgba(27,93,191,0.05),rgba(255,255,255,0.9))] px-4 py-4">
           <img src={subsidiary.logo} alt="" aria-hidden="true" className="h-full w-full object-contain" />
         </div>
         <div className="mt-5 flex items-center gap-2">

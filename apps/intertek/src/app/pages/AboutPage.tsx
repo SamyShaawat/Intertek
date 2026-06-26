@@ -30,7 +30,7 @@ export function AboutPage() {
 
       <PageWrapper>
         <section className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="rounded-[2.25rem] border border-white/70 bg-white/86 p-6 shadow-[0_16px_50px_rgba(10,28,52,0.08)] backdrop-blur-xl sm:p-8">
             <SectionKicker text="Who we are" />
             <div className="mt-5 space-y-4 text-sm leading-7 text-slate-600">
               <p>
@@ -53,7 +53,7 @@ export function AboutPage() {
                 'Senior Maritime Attorney',
                 'Senior Naval Architects',
               ].map((item) => (
-                <div key={item} className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700">
+                <div key={item} className="rounded-2xl border border-brand-navy/8 bg-[linear-gradient(180deg,rgba(27,93,191,0.04),rgba(255,255,255,0.9))] px-4 py-3 text-sm font-medium text-brand-navy">
                   {item}
                 </div>
               ))}
@@ -61,7 +61,7 @@ export function AboutPage() {
           </div>
 
           <div className="grid gap-4">
-            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-brand-navy shadow-sm">
+            <div className="overflow-hidden rounded-[2.25rem] border border-brand-navy/10 bg-brand-navy shadow-[0_20px_70px_rgba(10,28,52,0.16)]">
               <img
                 src="/img/branding/intertek-group-professional-cover.png"
                 alt="Intertek Group professional profile cover"
@@ -85,7 +85,7 @@ export function AboutPage() {
           </div>
         </section>
 
-        <section className="grid gap-5 rounded-[2rem] border border-slate-200 bg-[#0b1f3b] p-6 text-white shadow-sm lg:grid-cols-[1fr_1fr] sm:p-8">
+        <section className="grid gap-5 rounded-[2.25rem] border border-brand-navy/10 bg-brand-navy p-6 text-white shadow-[0_20px_70px_rgba(10,28,52,0.16)] lg:grid-cols-[1fr_1fr] sm:p-8">
           <div className="space-y-3">
             <SectionKicker text="Our market" light />
             <h2 className="text-3xl font-black tracking-tight">Fleet and customer focus</h2>

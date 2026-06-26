@@ -3,7 +3,7 @@ export function SectionKicker({ text, light = false }: { text: string; light?: b
     <p
       className={[
         'text-[11px] font-semibold uppercase tracking-[0.34em]',
-        light ? 'text-white/65' : 'text-[#1557bb]',
+        light ? 'text-white/62' : 'text-brand-blue',
       ].join(' ')}
     >
       {text}

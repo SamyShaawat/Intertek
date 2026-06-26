@@ -20,12 +20,12 @@ const tileVariants = [
 ] as const;
 
 const frameVariants = [
-  'rounded-[1.5rem] border border-slate-200 bg-white shadow-sm',
-  'rounded-[1.5rem] border border-slate-200 bg-slate-50 shadow-sm',
-  'rounded-[1.5rem] border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)]',
-  'rounded-[1.5rem] border border-slate-800 bg-[#0b1f3b] shadow-sm',
-  'rounded-[1.5rem] border border-slate-200 bg-white shadow-sm',
-  'rounded-[1.5rem] border border-slate-200 bg-slate-50 shadow-sm',
+  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_16px_40px_rgba(10,28,52,0.08)]',
+  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_16px_40px_rgba(10,28,52,0.06)]',
+  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_18px_46px_rgba(10,28,52,0.1)]',
+  'rounded-[1.5rem] border border-brand-navy/10 bg-brand-navy shadow-[0_18px_46px_rgba(10,28,52,0.14)]',
+  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_16px_40px_rgba(10,28,52,0.08)]',
+  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_16px_40px_rgba(10,28,52,0.06)]',
 ] as const;
 
 // Landscape frames get object-[center_25%] to favour upper portion of scene (where subjects are)
@@ -48,17 +48,17 @@ export function ImageMosaic({ images, className = '' }: ImageMosaicProps) {
         const { cls: aspectClass, pos: objectPos } = aspectVariants[index % aspectVariants.length];
 
         return (
-          <figure key={`${image.src}-${index}`} className={`group ${frameClass} overflow-hidden ${tileClass}`}>
+          <figure key={`${image.src}-${index}`} className={`group overflow-hidden ${frameClass} ${tileClass}`}>
             <div className={`relative w-full overflow-hidden ${aspectClass}`}>
               <img
                 src={image.src}
                 alt={image.alt}
-                className={`absolute inset-0 h-full w-full object-cover ${objectPos} transition-transform duration-500 group-hover:scale-105`}
+                className={`absolute inset-0 h-full w-full object-cover ${objectPos} transition-transform duration-700 group-hover:scale-[1.03]`}
                 loading="lazy"
               />
               {image.label ? (
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0b1f3b] via-[#0b1f3b]/60 to-transparent px-4 pb-4 pt-8 text-sm font-medium text-white">
-                  <span className="flex items-center gap-2">
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-steel/90 via-brand-steel/45 to-transparent px-4 pb-4 pt-10 text-sm font-medium text-white">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 backdrop-blur-md">
                     <span className="h-px w-4 bg-brand-red" aria-hidden="true" />
                     {image.label}
                   </span>

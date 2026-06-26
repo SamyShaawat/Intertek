@@ -31,17 +31,18 @@ const MailIcon = () => (
 
 export function Footer() {
   return (
-    <footer className="bg-brand-steel text-white">
-      {/* Brand-red accent strip */}
+    <footer className="relative overflow-hidden bg-brand-steel text-white">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(27,93,191,0.16),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(194,24,58,0.12),transparent_20%)]"
+      />
       <div className="h-[3px] bg-gradient-to-r from-transparent via-brand-red to-transparent" />
 
-      <div className="mx-auto w-full max-w-[1440px] px-4 pb-10 pt-16 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
-
-          {/* Brand */}
+      <div className="relative mx-auto w-full max-w-[1440px] px-4 pb-10 pt-16 sm:px-6 lg:px-8 lg:pb-12">
+        <div className="grid gap-12 rounded-[2.5rem] border border-white/8 bg-white/[0.03] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.18)] backdrop-blur-xl lg:grid-cols-[1.5fr_0.9fr_0.9fr_1fr] lg:p-8">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full border border-white/20 bg-white/10 p-2">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-[1.1rem] border border-white/15 bg-white/10 p-2">
                 <img
                   src="/img/branding/intertek-group-mark.png"
                   alt=""
@@ -55,16 +56,15 @@ export function Footer() {
               </div>
             </div>
 
-            <p className="max-w-xs text-sm leading-7 text-white/60">
-              Maritime registration, survey, consultancy, and compliance — trusted across 11 countries since 2006.
+            <p className="max-w-sm text-sm leading-7 text-white/66">
+              Maritime registration, survey, consultancy, and compliance. Trusted across 11 countries since 2006.
             </p>
 
-            {/* Stat pills */}
             <div className="flex flex-wrap gap-2">
               {footerStats.map((s) => (
                 <div
                   key={s.label}
-                  className="flex flex-col items-center rounded-full border border-white/15 bg-white/8 px-5 py-2.5"
+                  className="flex flex-col items-center rounded-full border border-white/12 bg-white/6 px-5 py-2.5"
                 >
                   <span className="text-lg font-black leading-none text-white">{s.value}</span>
                   <span className="mt-0.5 text-[9px] font-semibold uppercase tracking-widest text-white/45">
@@ -75,15 +75,14 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Navigation */}
           <div>
             <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/40">Navigation</p>
-            <nav aria-label="Footer navigation" className="space-y-0.5">
+            <nav aria-label="Footer navigation" className="space-y-1">
               {footerLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="flex items-center rounded-full px-4 py-2.5 text-sm font-medium text-white/70 transition-all hover:bg-white/8 hover:pl-6 hover:text-white"
+                  className="flex items-center rounded-full px-4 py-2.5 text-sm font-medium text-white/72 transition-all hover:bg-white/7 hover:pl-5 hover:text-white"
                 >
                   {link.label}
                 </Link>
@@ -91,20 +90,19 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* Contact */}
           <div>
             <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/40">Contact</p>
             <div className="space-y-3">
               <a
                 href="mailto:legal@intertekgroup.org"
-                className="flex items-center gap-2.5 rounded-full border border-white/12 bg-white/6 px-4 py-2.5 text-sm font-medium text-white/80 transition-all hover:border-brand-red/40 hover:bg-brand-red/10 hover:text-white"
+                className="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/6 px-4 py-3 text-sm font-medium text-white/82 transition-all hover:border-brand-red/40 hover:bg-brand-red/10 hover:text-white"
               >
                 <MailIcon />
                 legal@intertekgroup.org
               </a>
               <a
                 href="mailto:aimy@intertekgroup.org"
-                className="flex items-center gap-2.5 rounded-full border border-white/12 bg-white/6 px-4 py-2.5 text-sm font-medium text-white/80 transition-all hover:border-brand-red/40 hover:bg-brand-red/10 hover:text-white"
+                className="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/6 px-4 py-3 text-sm font-medium text-white/82 transition-all hover:border-brand-red/40 hover:bg-brand-red/10 hover:text-white"
               >
                 <MailIcon />
                 aimy@intertekgroup.org
@@ -112,7 +110,6 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Offices */}
           <div>
             <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/40">Offices</p>
             <div className="space-y-4">
@@ -121,7 +118,7 @@ export function Footer() {
                   <span className="mt-0.5 text-base leading-none">{o.flag}</span>
                   <div>
                     <p className="text-sm font-semibold text-white">{o.city}</p>
-                    <p className="mt-0.5 text-xs leading-5 text-white/50">{o.detail}</p>
+                    <p className="mt-0.5 text-xs leading-5 text-white/52">{o.detail}</p>
                   </div>
                 </div>
               ))}
@@ -129,15 +126,15 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-10 bg-white/8" />
+        <Separator className="my-10 bg-white/10" />
 
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-          <p className="text-xs text-white/35">© {new Date().getFullYear()} Intertek Group. All rights reserved.</p>
+          <p className="text-xs text-white/38">© {new Date().getFullYear()} Intertek Group. All rights reserved.</p>
           <div className="flex flex-wrap gap-2">
             {certs.map((cert) => (
               <span
                 key={cert}
-                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white/40"
+                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white/44"
               >
                 {cert}
               </span>
