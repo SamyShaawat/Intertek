@@ -14,20 +14,25 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.15.1
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-size: 20
-          cache: 'npm'
+          node-version: 24
+          cache: 'pnpm'
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Verify linter rules
-        run: npx nx lint intertek
+        run: pnpm exec nx lint intertek
 
       - name: Run unit tests
-        run: npx nx test intertek
+        run: pnpm exec nx test intertek
 
       - name: Build production assets
-        run: npx nx build intertek
+        run: pnpm exec nx build intertek
