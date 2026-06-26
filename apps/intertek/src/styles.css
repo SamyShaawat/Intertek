@@ -1,28 +1,11 @@
-@import "tailwindcss";
+@import "@heroui/styles";
 
 @theme {
   --font-sans: "Plus Jakarta Sans", "Outfit", system-ui, -apple-system, sans-serif;
   --font-display: "Outfit", system-ui, -apple-system, sans-serif;
 
-  /* Intertek Group Maritime Brand — all color tokens live here */
   --color-brand-blue: #1557bb;
   --color-brand-red: #c41230;
-  --color-brand-navy: #050d1a;
-  --color-brand-steel: #0b1929;
-}
-
-/* Custom keyframe — no Tailwind equivalent exists for this glow animation */
-@keyframes pulse-glow {
-  0%, 100% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale(1.06);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 8s infinite ease-in-out;
+  --color-brand-navy: #0b1f3b;
+  --color-brand-steel: #050d1a;
 }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Intertek Group">
+  <defs>
+    <clipPath id="circleClip">
+      <circle cx="64" cy="64" r="64" />
+    </clipPath>
+  </defs>
+  <circle cx="64" cy="64" r="64" fill="#ffffff" />
+  <circle cx="64" cy="64" r="60" fill="#f6f7f9" />
+  <g clip-path="url(#circleClip)">
+    <rect x="18" y="18" width="92" height="92" rx="46" fill="#ffffff" />
+    <image href="/img/branding/intertek-group-mark.png" x="26" y="26" width="76" height="76" preserveAspectRatio="xMidYMid meet" />
+  </g>
+  <circle cx="64" cy="64" r="61.5" fill="none" stroke="#1557bb" stroke-width="3" />
+</svg>
