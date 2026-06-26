@@ -42,7 +42,7 @@ export function SiteHeader({
                   'relative flex items-center px-4 py-5 text-sm font-medium transition-colors',
                   'after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[3px] after:transition-colors',
                   active
-                    ? 'text-brand-navy after:bg-brand-blue'
+                    ? 'text-brand-navy after:bg-brand-red'
                     : 'text-slate-500 hover:text-brand-navy after:bg-transparent hover:after:bg-slate-200',
                 ].join(' ')}
               >

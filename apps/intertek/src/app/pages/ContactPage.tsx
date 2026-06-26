@@ -8,11 +8,18 @@ import { OfficeCard } from '../components/OfficeCard';
 import { locations, offices } from './data';
 
 const SERVICE_OPTIONS = [
-  'Marine Surveys',
-  'Cargo Inspection',
-  'Bunker Surveys',
-  'P&I Surveys',
-  'Condition Surveys',
+  "Ships' Registration",
+  "Offshore Corporates' Registration",
+  'Mortgages Registration',
+  'Crew Documentation & Endorsement',
+  'Class H&M Services & Consultancy',
+  'Statutory Services & Consultancy',
+  'Naval Architecture & Consultancy',
+  'ISM & ISPS Services and Consultancy',
+  'Third Party Marine Surveys',
+  'Pre/Post-PSC Inspections',
+  'Incident & Near-Miss Response Attendance',
+  'MLC Crew Welfare Inspections',
   'Other',
 ];
 
@@ -50,7 +57,7 @@ export function ContactPage() {
     <div>
       <HeroBanner
         eyebrow="Contact"
-        title={['Global office map', 'and surveyor', 'footprint']}
+        title={["Three offices.", "Eleven surveyor", "countries."]}
         description="Reach our offices or submit an inquiry — we respond within one business day."
         image="/img/IG PHOTOS/marine-inspection-037.jpeg"
         imageAlt="Surveyor working near vessel hull"

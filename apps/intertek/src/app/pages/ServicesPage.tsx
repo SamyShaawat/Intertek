@@ -20,8 +20,8 @@ export function ServicesPage() {
     <div>
       <HeroBanner
         eyebrow="Services"
-        title={['Service matrix', 'with image-led', 'sections']}
-        description="Direct, readable service cards backed by vessel photography and a strong editorial grid."
+        title={['Registration,', 'surveys, and', 'compliance services']}
+        description="From ship registration in Panama to third-party surveys and ISM compliance across the Middle East — every service delivered by specialists with flag state and IACS backgrounds."
         image="/img/IG PHOTOS/marine-inspection-030.jpeg"
         imageAlt="Inspection work on vessel deck"
         primaryLink={{ to: ROUTES.CONTACT, label: 'Request contact' }}
@@ -62,9 +62,9 @@ export function ServicesPage() {
 
         <section className="space-y-5">
           <SectionHeading
-            eyebrow="Inspection scenes"
-            title="All image types can work if the layout is disciplined"
-            description="Use content from the whole image library, but keep the same margins, cropping, and captions."
+            eyebrow="In the field"
+            title="Real inspections. Real ships."
+            description="Our surveyors operate across 11 countries covering deepsea shipping, offshore vessels, government fleets, and pleasure yachts."
           />
           <ImageMosaic images={servicesImages} />
         </section>

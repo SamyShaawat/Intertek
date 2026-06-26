@@ -21,7 +21,7 @@ export function AboutPage() {
       <HeroBanner
         eyebrow="About"
         title={['Founding story,', 'technical depth,', 'and subsidiary brands']}
-        description="Clean profile page with less noise and stronger image hierarchy."
+        description="Founded in Panama in 2006 by a distinguished board of former flag state inspectors, IACS marine surveyors, maritime attorneys, and naval architects."
         image="/img/IG PHOTOS/marine-inspection-018.jpeg"
         imageAlt="Marine team working on deck"
         primaryLink={{ to: ROUTES.SERVICES, label: 'View services' }}
@@ -76,7 +76,7 @@ export function AboutPage() {
           <SectionHeading
             eyebrow="Subsidiaries"
             title="Distinct brands, shared standards"
-            description="Each unit gets its own component card, logo, and message."
+            description="Legal Marine Tek, Intertek Maritime Bureau, and Intertek Maritime Middle East operate under the same quality mandate and leadership team."
           />
           <div className="grid gap-4 lg:grid-cols-3">
             {subsidiaries.map((item) => (
@@ -90,7 +90,7 @@ export function AboutPage() {
             <SectionKicker text="Our market" light />
             <h2 className="text-3xl font-black tracking-tight">Fleet and customer focus</h2>
             <p className="max-w-xl text-sm leading-7 text-white/75">
-              A clean shipping brand needs focused copy and strong visual structure. No sidebar needed.
+              Round-the-clock customer care, wherever you are.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

@@ -44,7 +44,7 @@ function AppShell() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#f6f7f9] text-slate-900 antialiased">
+    <div className="min-h-screen overflow-x-hidden bg-[#f1f3f6] text-slate-900 antialiased">
       <SiteHeader
         mobileOpen={mobileOpen}
         onToggleMobile={() => setMobileOpen((value) => !value)}
