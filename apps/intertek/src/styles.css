@@ -4,15 +4,42 @@
   --font-sans: "Plus Jakarta Sans", "Outfit", system-ui, -apple-system, sans-serif;
   --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
 
-  --color-brand-blue: #1557bb;
-  --color-brand-red: #c41230;
-  --color-brand-navy: #0b1f3b;
-  --color-brand-steel: #050d1a;
+  --color-brand-blue: #1b5dbf;
+  --color-brand-red: #c2183a;
+  --color-brand-navy: #0a1c34;
+  --color-brand-steel: #050b14;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(27, 93, 191, 0.08), transparent 32%),
+    radial-gradient(circle at 20% 20%, rgba(194, 24, 58, 0.07), transparent 24%),
+    linear-gradient(180deg, #f6f7fb 0%, #eef2f7 100%);
+}
+
+::selection {
+  background: rgba(27, 93, 191, 0.16);
+  color: #0a1c34;
 }
 
 @keyframes filmstrip {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .filmstrip-track {
@@ -21,4 +48,8 @@
 
 .filmstrip-track:hover {
   animation-play-state: paused;
+}
+
+.fade-up {
+  animation: fade-up 700ms ease-out both;
 }

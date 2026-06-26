@@ -8,10 +8,11 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | 
   override render() {
     if (this.state.error) {
       return (
-        <div className="flex min-h-screen items-center justify-center p-8 text-center">
-          <div>
-            <p className="text-lg font-semibold text-slate-800">Something went wrong.</p>
-            <p className="mt-1 text-sm text-slate-500">Please refresh the page.</p>
+        <div className="flex min-h-screen items-center justify-center bg-[radial-gradient(circle_at_top,rgba(27,93,191,0.1),transparent_30%),linear-gradient(180deg,#f6f7fb,#eef2f7)] p-8 text-center">
+          <div className="max-w-sm rounded-[2rem] border border-white/70 bg-white/85 p-8 shadow-[0_24px_80px_rgba(10,28,52,0.12)] backdrop-blur-xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-red">Application error</p>
+            <p className="mt-3 text-xl font-bold tracking-tight text-brand-navy">Something went wrong.</p>
+            <p className="mt-2 text-sm leading-6 text-slate-600">Refresh the page to try again.</p>
           </div>
         </div>
       );
@@ -46,7 +47,11 @@ function AppShell() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#f1f3f6] text-slate-900 antialiased">
+    <div className="relative min-h-screen overflow-x-hidden text-slate-900 antialiased">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(27,93,191,0.08),transparent_32%),radial-gradient(circle_at_20%_20%,rgba(194,24,58,0.08),transparent_24%),linear-gradient(180deg,#f7f8fb_0%,#eef2f7_100%)]"
+      />
       <SiteHeader
         mobileOpen={mobileOpen}
         onToggleMobile={() => setMobileOpen((value) => !value)}

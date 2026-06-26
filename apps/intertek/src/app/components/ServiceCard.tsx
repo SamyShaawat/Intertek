@@ -16,13 +16,13 @@ export function ServiceCard({ service }: { service: Service }) {
     <div className="group rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
       <Chip
         size="sm"
-        variant="bordered"
+        variant="soft"
         className={`${colors.chip} text-[10px] font-semibold uppercase tracking-[0.22em] h-5 px-2`}
-        startContent={
-          <span className={`inline-block h-1.5 w-1.5 rounded-full ${colors.dot} shrink-0`} />
-        }
       >
-        {service.category}
+        <span className="inline-flex items-center gap-1.5">
+          <span className={`inline-block h-1.5 w-1.5 rounded-full ${colors.dot} shrink-0`} />
+          {service.category}
+        </span>
       </Chip>
       <p className="mt-3 break-words text-sm font-semibold leading-6 text-slate-800">{service.title}</p>
     </div>

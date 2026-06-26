@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Input, Textarea, Select, SelectItem, Button } from '@heroui/react';
 import { useSEO } from '../hooks/useSEO';
 import { ROUTES } from '../constants/routes';
 import { HeroBanner } from '../components/HeroBanner';
@@ -117,104 +116,104 @@ export function ContactPage() {
                 Thank you, <strong>{formData.company}</strong>. We'll be in touch at{' '}
                 <strong>{formData.email}</strong> shortly.
               </p>
-              <Button
+              <button
                 type="button"
-                radius="full"
-                size="sm"
-                className="mt-2 bg-emerald-700 font-semibold text-white hover:bg-emerald-800"
-                onPress={() => {
+                className="mt-2 rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-800"
+                onClick={() => {
                   setSubmitted(false);
                   setFormData({ company: '', email: '', service: '', location: '', message: '' });
                 }}
               >
                 Submit another
-              </Button>
+              </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="mt-8 grid gap-5 sm:grid-cols-2">
-              <Input
-                id="company"
-                label="Company / Name"
-                placeholder="Acme Shipping Ltd."
-                isRequired
-                radius="lg"
-                value={formData.company}
-                onValueChange={(v) => setFormData({ ...formData, company: v })}
-                classNames={{
-                  inputWrapper: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
-                }}
-              />
+              <label className="grid gap-2 text-sm font-semibold text-slate-700">
+                <span>Company / Name</span>
+                <input
+                  id="company"
+                  name="company"
+                  type="text"
+                  placeholder="Acme Shipping Ltd."
+                  required
+                  value={formData.company}
+                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brand-navy focus:bg-white"
+                />
+              </label>
 
-              <Input
-                id="email"
-                type="email"
-                label="Email address"
-                placeholder="ops@acmeshipping.com"
-                isRequired
-                radius="lg"
-                value={formData.email}
-                onValueChange={(v) => setFormData({ ...formData, email: v })}
-                classNames={{
-                  inputWrapper: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
-                }}
-              />
+              <label className="grid gap-2 text-sm font-semibold text-slate-700">
+                <span>Email address</span>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="ops@acmeshipping.com"
+                  required
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brand-navy focus:bg-white"
+                />
+              </label>
 
-              <Select
-                id="service"
-                label="Service required"
-                placeholder="Select a service…"
-                radius="lg"
-                selectedKeys={formData.service ? [formData.service] : []}
-                onSelectionChange={(keys) =>
-                  setFormData({ ...formData, service: Array.from(keys)[0] as string ?? '' })
-                }
-                classNames={{
-                  trigger: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
-                }}
-              >
-                {SERVICE_OPTIONS.map((s) => (
-                  <SelectItem key={s}>{s}</SelectItem>
-                ))}
-              </Select>
+              <label className="grid gap-2 text-sm font-semibold text-slate-700">
+                <span>Service required</span>
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  value={formData.service}
+                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brand-navy focus:bg-white"
+                >
+                  <option value="" disabled>
+                    Select a service…
+                  </option>
+                  {SERVICE_OPTIONS.map((s) => (
+                    <option key={s} value={s}>
+                      {s}
+                    </option>
+                  ))}
+                </select>
+              </label>
 
-              <Input
-                id="location"
-                label="Port / location"
-                placeholder="Panama City, Panama"
-                radius="lg"
-                value={formData.location}
-                onValueChange={(v) => setFormData({ ...formData, location: v })}
-                classNames={{
-                  inputWrapper: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
-                }}
-              />
+              <label className="grid gap-2 text-sm font-semibold text-slate-700">
+                <span>Port / location</span>
+                <input
+                  id="location"
+                  name="location"
+                  type="text"
+                  placeholder="Panama City, Panama"
+                  value={formData.location}
+                  onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brand-navy focus:bg-white"
+                />
+              </label>
 
               <div className="sm:col-span-2">
-                <Textarea
-                  id="message"
-                  label="Message"
-                  placeholder="Describe your inspection requirements, vessel details, or any other relevant information…"
-                  isRequired
-                  minRows={5}
-                  radius="lg"
-                  value={formData.message}
-                  onValueChange={(v) => setFormData({ ...formData, message: v })}
-                  classNames={{
-                    inputWrapper: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
-                  }}
-                />
+                <label className="grid gap-2 text-sm font-semibold text-slate-700">
+                  <span>Message</span>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Describe your inspection requirements, vessel details, or any other relevant information…"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-brand-navy focus:bg-white"
+                  />
+                </label>
               </div>
 
               <div className="sm:col-span-2">
-                <Button
+                <button
                   type="submit"
-                  radius="full"
-                  size="lg"
-                  className="bg-brand-navy px-8 font-semibold text-white shadow-sm hover:-translate-y-0.5 transition-transform"
-                  disableRipple
+                  className="rounded-full bg-brand-navy px-8 py-3 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5"
                 >
                   Submit inquiry
-                </Button>
+                </button>
               </div>
             </form>
           )}

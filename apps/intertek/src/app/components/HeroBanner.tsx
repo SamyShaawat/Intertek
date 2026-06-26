@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Button } from '@heroui/react';
 import { Link } from 'react-router-dom';
 
 export function HeroBanner({
@@ -77,29 +76,20 @@ export function HeroBanner({
         {(primaryLink ?? secondaryLink) ? (
           <div className="mt-9 flex flex-wrap gap-3">
             {primaryLink ? (
-              <Button
-                as={Link as React.ElementType}
-                {...{ to: primaryLink.to }}
-                radius="sm"
-                size="lg"
-                disableRipple
-                className="bg-brand-red px-7 font-semibold text-white shadow-lg shadow-black/20 hover:opacity-90"
+              <Link
+                to={primaryLink.to}
+                className="inline-flex items-center justify-center rounded-full bg-brand-red px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-black/20 hover:opacity-90"
               >
                 {primaryLink.label}
-              </Button>
+              </Link>
             ) : null}
             {secondaryLink ? (
-              <Button
-                as={Link as React.ElementType}
-                {...{ to: secondaryLink.to }}
-                variant="bordered"
-                radius="sm"
-                size="lg"
-                disableRipple
-                className="border-white/30 bg-white/10 font-semibold text-white backdrop-blur-sm hover:bg-white/20"
+              <Link
+                to={secondaryLink.to}
+                className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/20"
               >
                 {secondaryLink.label}
-              </Button>
+              </Link>
             ) : null}
           </div>
         ) : null}
