@@ -41,6 +41,8 @@ function AppShell() {
 
   useEffect(() => {
     setMobileOpen(false);
+    window.scrollTo(0, 0);
+    setIsScrolled(false);
   }, [location.pathname]);
 
   return (
@@ -56,7 +58,7 @@ function AppShell() {
         <ErrorBoundary>
           <Routes>
             <Route path={ROUTES.HOME} element={<HomePage />} />
-            <Route path={ROUTES.CODE_OF_PRACTICE} element={<AboutPage />} />
+            <Route path={ROUTES.ABOUT} element={<AboutPage />} />
             <Route path={ROUTES.SERVICES} element={<ServicesPage />} />
             <Route path={ROUTES.CONTACT} element={<ContactPage />} />
           </Routes>

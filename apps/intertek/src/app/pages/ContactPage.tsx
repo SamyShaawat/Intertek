@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Input, Textarea, Select, SelectItem, Button } from '@heroui/react';
 import { useSEO } from '../hooks/useSEO';
 import { ROUTES } from '../constants/routes';
 import { HeroBanner } from '../components/HeroBanner';
@@ -62,7 +63,7 @@ export function ContactPage() {
         image="/img/IG PHOTOS/marine-inspection-037.jpeg"
         imageAlt="Surveyor working near vessel hull"
         primaryLink={{ to: ROUTES.SERVICES, label: 'Explore services' }}
-        secondaryLink={{ to: ROUTES.CODE_OF_PRACTICE, label: 'About company' }}
+        secondaryLink={{ to: ROUTES.ABOUT, label: 'About company' }}
       />
 
       <PageWrapper>
@@ -81,7 +82,7 @@ export function ContactPage() {
               <img
                 src="/img/IG PHOTOS/marine-inspection-037.jpeg"
                 alt="Surveyor near vessel hull"
-                className="h-72 w-full object-cover"
+                className="aspect-[4/3] w-full object-cover object-[center_20%]"
               />
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-[#0b1f3b] p-6 text-white shadow-sm sm:p-8">
@@ -116,102 +117,104 @@ export function ContactPage() {
                 Thank you, <strong>{formData.company}</strong>. We'll be in touch at{' '}
                 <strong>{formData.email}</strong> shortly.
               </p>
-              <button
+              <Button
                 type="button"
-                onClick={() => {
+                radius="full"
+                size="sm"
+                className="mt-2 bg-emerald-700 font-semibold text-white hover:bg-emerald-800"
+                onPress={() => {
                   setSubmitted(false);
                   setFormData({ company: '', email: '', service: '', location: '', message: '' });
                 }}
-                className="mt-2 rounded-full bg-emerald-700 px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-800"
               >
                 Submit another
-              </button>
+              </Button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="mt-8 grid gap-5 sm:grid-cols-2">
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="company" className="text-sm font-semibold text-slate-700">
-                  Company / Name <span aria-hidden="true" className="text-red-500">*</span>
-                </label>
-                <input
-                  id="company"
-                  type="text"
-                  required
-                  value={formData.company}
-                  onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                  placeholder="Acme Shipping Ltd."
-                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#0b1f3b] focus:ring-2 focus:ring-[#0b1f3b]/10"
-                />
-              </div>
+              <Input
+                id="company"
+                label="Company / Name"
+                placeholder="Acme Shipping Ltd."
+                isRequired
+                radius="lg"
+                value={formData.company}
+                onValueChange={(v) => setFormData({ ...formData, company: v })}
+                classNames={{
+                  inputWrapper: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
+                }}
+              />
 
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="email" className="text-sm font-semibold text-slate-700">
-                  Email address <span aria-hidden="true" className="text-red-500">*</span>
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  placeholder="ops@acmeshipping.com"
-                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#0b1f3b] focus:ring-2 focus:ring-[#0b1f3b]/10"
-                />
-              </div>
+              <Input
+                id="email"
+                type="email"
+                label="Email address"
+                placeholder="ops@acmeshipping.com"
+                isRequired
+                radius="lg"
+                value={formData.email}
+                onValueChange={(v) => setFormData({ ...formData, email: v })}
+                classNames={{
+                  inputWrapper: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
+                }}
+              />
 
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="service" className="text-sm font-semibold text-slate-700">
-                  Service required
-                </label>
-                <select
-                  id="service"
-                  value={formData.service}
-                  onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#0b1f3b] focus:ring-2 focus:ring-[#0b1f3b]/10"
-                >
-                  <option value="">Select a service…</option>
-                  {SERVICE_OPTIONS.map((s) => (
-                    <option key={s} value={s}>{s}</option>
-                  ))}
-                </select>
-              </div>
+              <Select
+                id="service"
+                label="Service required"
+                placeholder="Select a service…"
+                radius="lg"
+                selectedKeys={formData.service ? [formData.service] : []}
+                onSelectionChange={(keys) =>
+                  setFormData({ ...formData, service: Array.from(keys)[0] as string ?? '' })
+                }
+                classNames={{
+                  trigger: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
+                }}
+              >
+                {SERVICE_OPTIONS.map((s) => (
+                  <SelectItem key={s}>{s}</SelectItem>
+                ))}
+              </Select>
 
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="location" className="text-sm font-semibold text-slate-700">
-                  Port / location
-                </label>
-                <input
-                  id="location"
-                  type="text"
-                  value={formData.location}
-                  onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                  placeholder="Panama City, Panama"
-                  className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#0b1f3b] focus:ring-2 focus:ring-[#0b1f3b]/10"
-                />
-              </div>
+              <Input
+                id="location"
+                label="Port / location"
+                placeholder="Panama City, Panama"
+                radius="lg"
+                value={formData.location}
+                onValueChange={(v) => setFormData({ ...formData, location: v })}
+                classNames={{
+                  inputWrapper: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
+                }}
+              />
 
-              <div className="flex flex-col gap-1.5 sm:col-span-2">
-                <label htmlFor="message" className="text-sm font-semibold text-slate-700">
-                  Message <span aria-hidden="true" className="text-red-500">*</span>
-                </label>
-                <textarea
+              <div className="sm:col-span-2">
+                <Textarea
                   id="message"
-                  required
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  label="Message"
                   placeholder="Describe your inspection requirements, vessel details, or any other relevant information…"
-                  className="resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-[#0b1f3b] focus:ring-2 focus:ring-[#0b1f3b]/10"
+                  isRequired
+                  minRows={5}
+                  radius="lg"
+                  value={formData.message}
+                  onValueChange={(v) => setFormData({ ...formData, message: v })}
+                  classNames={{
+                    inputWrapper: 'bg-slate-50 border border-slate-200 shadow-none hover:border-brand-navy',
+                  }}
                 />
               </div>
 
               <div className="sm:col-span-2">
-                <button
+                <Button
                   type="submit"
-                  className="rounded-full bg-[#0b1f3b] px-8 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform hover:-translate-y-0.5"
+                  radius="full"
+                  size="lg"
+                  className="bg-brand-navy px-8 font-semibold text-white shadow-sm hover:-translate-y-0.5 transition-transform"
+                  disableRipple
                 >
                   Submit inquiry
-                </button>
+                </Button>
               </div>
             </form>
           )}

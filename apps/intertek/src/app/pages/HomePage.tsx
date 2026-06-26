@@ -62,15 +62,15 @@ export function HomePage() {
                   From registration in Panama to third-party surveys in the Gulf — every service runs under the same oversight standard, with the same team accountability.
                 </p>
                 <Link
-                  to={ROUTES.CODE_OF_PRACTICE}
+                  to={ROUTES.ABOUT}
                   className="inline-flex w-fit rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#0b1f3b] shadow-sm"
                 >
                   See company profile
                 </Link>
               </div>
               <img
-                src="/img/IG PHOTOS/marine-inspection-026.jpg"
-                alt="Vessel inspection imagery"
+                src="/img/IG PHOTOS/marine-inspection-015.jpg"
+                alt="Surveyors conducting vessel inspection"
                 className="h-64 w-full object-cover lg:h-full"
               />
             </div>

@@ -118,23 +118,30 @@ export const serviceHighlights = [
   'Incident and near-miss attendance',
 ];
 
+// homeImages: field/port scenes — distinct from home hero (026) and filmstrip (002,004,007,009,012,016,022,031)
 export const homeImages: MosaicImage[] = [
   { src: '/img/IG PHOTOS/marine-inspection-005.jpeg', alt: 'Marine inspection at port', label: 'Field work' },
-  { src: '/img/IG PHOTOS/marine-inspection-018.jpeg', alt: 'Deck inspection', label: 'Deck work' },
-  { src: '/img/IG PHOTOS/marine-inspection-032.jpeg', alt: 'Hull inspection', label: 'Hull work' },
-  { src: '/img/IG PHOTOS/marine-inspection-036.jpg', alt: 'Suspended boat inspection', label: 'Lift work' },
+  { src: '/img/IG PHOTOS/marine-inspection-032.jpeg', alt: 'Hull inspection work', label: 'Hull surveys' },
+  { src: '/img/IG PHOTOS/marine-inspection-008.jpg', alt: 'Vessel deck inspection', label: 'Deck work' },
+  { src: '/img/IG PHOTOS/marine-inspection-003.jpg', alt: 'Marine survey on deck', label: 'Survey' },
+  { src: '/img/IG PHOTOS/marine-inspection-019.jpeg', alt: 'Inspection team at work', label: 'In the field' },
+  { src: '/img/IG PHOTOS/marine-inspection-036.jpg', alt: 'Vessel lifted for inspection', label: 'Lift work' },
 ];
 
+// aboutImages: team/vessel identity — distinct from about hero (018) and filmstrip
 export const aboutImages: MosaicImage[] = [
-  { src: '/img/IG PHOTOS/marine-inspection-001.jpeg', alt: 'Marine inspection' },
-  { src: '/img/IG PHOTOS/marine-inspection-017.jpg', alt: 'Engine room inspection' },
+  { src: '/img/IG PHOTOS/marine-inspection-001.jpeg', alt: 'Marine inspection team' },
   { src: '/img/IG PHOTOS/marine-inspection-021.jpeg', alt: 'Vessel inspection' },
+  { src: '/img/IG PHOTOS/marine-inspection-023.jpg', alt: 'Inspector boarding vessel' },
   { src: '/img/IG PHOTOS/marine-inspection-037.jpeg', alt: 'Surveyor near hull' },
 ];
 
+// servicesImages: technical/compliance work — distinct from services hero (030) and filmstrip
 export const servicesImages: MosaicImage[] = [
   { src: '/img/IG PHOTOS/marine-inspection-010.jpg', alt: 'Inspection team on deck' },
-  { src: '/img/IG PHOTOS/marine-inspection-026.jpg', alt: 'Intertek vessel branding' },
-  { src: '/img/IG PHOTOS/marine-inspection-030.jpeg', alt: 'Bridge inspection' },
-  { src: '/img/IG PHOTOS/marine-inspection-038.jpg', alt: 'Surveyors on deck' },
+  { src: '/img/IG PHOTOS/marine-inspection-038.jpg', alt: 'Surveyors at work on deck' },
+  { src: '/img/IG PHOTOS/marine-inspection-029.jpeg', alt: 'Close inspection work' },
+  { src: '/img/IG PHOTOS/marine-inspection-033.jpeg', alt: 'Technical inspection' },
+  { src: '/img/IG PHOTOS/marine-inspection-034.jpeg', alt: 'Marine compliance check' },
+  { src: '/img/IG PHOTOS/marine-inspection-035.jpeg', alt: 'Surveyor on vessel' },
 ];

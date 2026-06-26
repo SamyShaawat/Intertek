@@ -9,17 +9,21 @@ const images = [
   { src: '/img/IG PHOTOS/marine-inspection-031.jpeg', alt: 'Surveyors at work' },
 ];
 
+// Duplicated for seamless infinite loop — track translates -50% then resets
+const track = [...images, ...images];
+
 export function InspectionFilmstrip() {
   return (
-    <div className="border-t-4 border-brand-red overflow-x-auto">
-      <div className="flex h-48 sm:h-56">
-        {images.map((img, i) => (
-          <div key={i} className="relative w-44 shrink-0 overflow-hidden md:w-auto md:flex-1">
+    <div className="border-t-4 border-brand-red overflow-hidden">
+      <div className="filmstrip-track flex h-52 sm:h-60 w-max gap-1">
+        {track.map((img, i) => (
+          <div key={i} className="relative w-64 shrink-0 overflow-hidden rounded-sm sm:w-72">
             <img
               src={img.src}
               alt={img.alt}
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
               loading="lazy"
+              draggable={false}
             />
           </div>
         ))}

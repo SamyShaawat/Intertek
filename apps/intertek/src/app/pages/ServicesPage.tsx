@@ -25,7 +25,7 @@ export function ServicesPage() {
         image="/img/IG PHOTOS/marine-inspection-030.jpeg"
         imageAlt="Inspection work on vessel deck"
         primaryLink={{ to: ROUTES.CONTACT, label: 'Request contact' }}
-        secondaryLink={{ to: ROUTES.CODE_OF_PRACTICE, label: 'About Intertek' }}
+        secondaryLink={{ to: ROUTES.ABOUT, label: 'About Intertek' }}
       />
 
       <PageWrapper>
@@ -42,9 +42,9 @@ export function ServicesPage() {
           <div className="grid gap-5">
             <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
               <img
-                src="/img/IG PHOTOS/marine-inspection-030.jpeg"
-                alt="Marine inspection on deck"
-                className="h-72 w-full object-cover"
+                src="/img/IG PHOTOS/marine-inspection-011.jpg"
+                alt="Marine survey in progress"
+                className="aspect-[4/3] w-full object-cover object-[center_20%]"
               />
             </div>
             <div className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">

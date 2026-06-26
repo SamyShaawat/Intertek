@@ -61,11 +61,11 @@ export function AboutPage() {
           </div>
 
           <div className="grid gap-4">
-            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm">
+            <div className="overflow-hidden rounded-[2rem] border border-slate-200 bg-brand-navy shadow-sm">
               <img
                 src="/img/branding/intertek-group-professional-cover.png"
-                alt="Intertek Group cover image"
-                className="h-72 w-full object-cover"
+                alt="Intertek Group professional profile cover"
+                className="aspect-video w-full object-contain"
               />
             </div>
             <ImageMosaic images={aboutImages} className="lg:grid-cols-2" />

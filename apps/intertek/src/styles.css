@@ -9,3 +9,16 @@
   --color-brand-navy: #0b1f3b;
   --color-brand-steel: #050d1a;
 }
+
+@keyframes filmstrip {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.filmstrip-track {
+  animation: filmstrip 40s linear infinite;
+}
+
+.filmstrip-track:hover {
+  animation-play-state: paused;
+}
