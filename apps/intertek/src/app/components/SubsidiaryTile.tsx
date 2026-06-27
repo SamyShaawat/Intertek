@@ -1,8 +1,8 @@
-import type { Subsidiary } from '../pages/data';
+import type { Subsidiary } from '../data/siteContent';
 
 export function SubsidiaryTile({ subsidiary }: { subsidiary: Subsidiary }) {
   return (
-    <div className="group relative flex flex-col rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-6 backdrop-blur-xl transition-all duration-300 hover:border-brand-red/40 hover:bg-white/[0.09]">
+    <div className="group relative flex flex-col rounded-[1.5rem] border border-white/10 bg-white/[0.10] p-6 backdrop-blur-xl transition-all duration-300 hover:border-brand-red/30 hover:bg-white/[0.14]">
       <div className="mb-5 flex h-14 items-center overflow-hidden">
         <img
           src={subsidiary.logo}

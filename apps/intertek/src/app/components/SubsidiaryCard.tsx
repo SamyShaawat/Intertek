@@ -1,16 +1,16 @@
 import { Card } from '@heroui/react';
-import type { Subsidiary } from '../pages/data';
+import type { Subsidiary } from '../data/siteContent';
 
 export function SubsidiaryCard({ subsidiary }: { subsidiary: Subsidiary }) {
   return (
-    <Card className="rounded-[2rem] border border-white/10 bg-white/[0.06] shadow-[0_16px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+    <Card className="rounded-[2rem] border border-white/10 bg-white/[0.10] shadow-[0_16px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl">
       <Card.Content className="p-6">
-        <div className="flex h-28 items-center justify-center overflow-hidden rounded-[1.4rem] border border-white/10 bg-white/10 px-4 py-4">
+        <div className="flex h-28 items-center justify-center overflow-hidden rounded-[1.4rem] border border-white/10 bg-white/14 px-4 py-4">
           <img src={subsidiary.logo} alt="" aria-hidden="true" className="h-full w-full object-contain" />
         </div>
         <div className="mt-5 flex items-center gap-2">
           <span className="inline-block h-px w-5 bg-brand-red" aria-hidden="true" />
-          <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-red-400">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-brand-red">
             {subsidiary.tagline}
           </p>
         </div>

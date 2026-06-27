@@ -4,10 +4,10 @@
   --font-sans: "Plus Jakarta Sans", "Outfit", system-ui, -apple-system, sans-serif;
   --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
 
-  --color-brand-blue: #1b5dbf;
+  --color-brand-blue: #4f7fa6;
   --color-brand-red: #c2183a;
-  --color-brand-navy: #0a1c34;
-  --color-brand-steel: #050b14;
+  --color-brand-navy: #102235;
+  --color-brand-steel: #0a131d;
 }
 
 html {
@@ -16,14 +16,14 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(27, 93, 191, 0.12), transparent 40%),
-    radial-gradient(circle at 80% 60%, rgba(194, 24, 58, 0.07), transparent 30%),
-    linear-gradient(180deg, #060d1a 0%, #0a1c34 100%);
+    radial-gradient(circle at top, rgba(79, 127, 166, 0.18), transparent 36%),
+    radial-gradient(circle at 80% 20%, rgba(194, 24, 58, 0.12), transparent 28%),
+    linear-gradient(180deg, #0c1320 0%, #101c2a 55%, #0a121c 100%);
 }
 
 ::selection {
-  background: rgba(27, 93, 191, 0.16);
-  color: #0a1c34;
+  background: rgba(194, 24, 58, 0.22);
+  color: #0a121c;
 }
 
 @keyframes filmstrip {

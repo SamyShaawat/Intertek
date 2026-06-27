@@ -9,10 +9,10 @@ interface BadgeProps {
 }
 
 const variantStyles: Record<BadgeVariant, string> = {
-  blue: 'bg-brand-blue/10 text-blue-300 border-brand-blue/20',
-  red: 'bg-brand-red/10 text-red-300 border-brand-red/20',
+  blue: 'bg-brand-blue/10 text-brand-blue border-brand-blue/20',
+  red: 'bg-brand-red/10 text-brand-red border-brand-red/20',
   steel: 'bg-slate-800/60 text-slate-300 border-slate-700/40',
-  success: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+  success: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20',
 };
 
 export function Badge({ children, variant = 'blue', className = '' }: BadgeProps) {

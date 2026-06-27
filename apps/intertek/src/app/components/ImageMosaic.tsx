@@ -20,12 +20,12 @@ const tileVariants = [
 ] as const;
 
 const frameVariants = [
-  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.25)]',
-  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.2)]',
-  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_18px_46px_rgba(0,0,0,0.28)]',
-  'rounded-[1.5rem] border border-white/10 bg-brand-steel shadow-[0_18px_46px_rgba(0,0,0,0.32)]',
-  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.25)]',
-  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.2)]',
+  'rounded-[1.5rem] border border-white/12 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.25)]',
+  'rounded-[1.5rem] border border-white/12 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.2)]',
+  'rounded-[1.5rem] border border-white/12 bg-brand-navy shadow-[0_18px_46px_rgba(0,0,0,0.28)]',
+  'rounded-[1.5rem] border border-white/12 bg-brand-steel shadow-[0_18px_46px_rgba(0,0,0,0.32)]',
+  'rounded-[1.5rem] border border-white/12 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.25)]',
+  'rounded-[1.5rem] border border-white/12 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.2)]',
 ] as const;
 
 // Landscape frames get object-[center_25%] to favour upper portion of scene (where subjects are)
@@ -57,8 +57,8 @@ export function ImageMosaic({ images, className = '' }: ImageMosaicProps) {
                 loading="lazy"
               />
               {image.label ? (
-                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-steel/90 via-brand-steel/45 to-transparent px-4 pb-4 pt-10 text-sm font-medium text-white">
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-3 py-1 backdrop-blur-md">
+                <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-steel/94 via-brand-steel/55 to-transparent px-4 pb-4 pt-10 text-sm font-medium text-white">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/14 px-3 py-1 backdrop-blur-md">
                     <span className="h-px w-4 bg-brand-red" aria-hidden="true" />
                     {image.label}
                   </span>

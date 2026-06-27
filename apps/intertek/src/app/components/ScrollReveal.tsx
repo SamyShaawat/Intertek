@@ -10,6 +10,10 @@ export function ScrollReveal({
   delay?: number;
   className?: string;
 }) {
+  if (typeof IntersectionObserver === 'undefined') {
+    return <div className={className}>{children}</div>;
+  }
+
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
   const shouldReduce = useReducedMotion();

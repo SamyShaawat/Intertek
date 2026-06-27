@@ -1,19 +1,19 @@
 import { Chip } from '@heroui/react';
-import type { ServiceCategory } from '../pages/data';
+import type { ServiceCategory } from '../data/siteContent';
 
 const CATEGORY_COLORS: Record<ServiceCategory, { chip: string; dot: string }> = {
-  Registration: { chip: 'bg-white/10 text-white border-white/15',                   dot: 'bg-white/60' },
-  Crew:         { chip: 'bg-amber-500/15 text-amber-300 border-amber-500/20',       dot: 'bg-amber-400' },
-  Consultancy:  { chip: 'bg-blue-500/15 text-blue-300 border-blue-500/20',          dot: 'bg-blue-400' },
-  Safety:       { chip: 'bg-red-500/15 text-red-400 border-red-500/20',             dot: 'bg-red-400' },
-  Surveys:      { chip: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/20', dot: 'bg-emerald-400' },
-  Inspections:  { chip: 'bg-violet-500/15 text-violet-300 border-violet-500/20',    dot: 'bg-violet-400' },
+  Registration: { chip: 'bg-slate-100/12 text-slate-100 border-white/15',          dot: 'bg-slate-200' },
+  Crew:         { chip: 'bg-amber-500/12 text-amber-200 border-amber-500/20',       dot: 'bg-amber-200' },
+  Consultancy:  { chip: 'bg-sky-500/12 text-sky-200 border-sky-500/20',             dot: 'bg-sky-200' },
+  Safety:       { chip: 'bg-rose-500/12 text-rose-200 border-rose-500/20',          dot: 'bg-rose-200' },
+  Surveys:      { chip: 'bg-emerald-500/12 text-emerald-200 border-emerald-500/20', dot: 'bg-emerald-200' },
+  Inspections:  { chip: 'bg-cyan-500/12 text-cyan-200 border-cyan-500/20',          dot: 'bg-cyan-200' },
 };
 
 export function ServicePill({ title, category }: { title: string; category: ServiceCategory }) {
   const colors = CATEGORY_COLORS[category];
   return (
-    <div className="group rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-4 shadow-[0_14px_40px_rgba(0,0,0,0.2)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.10]">
+    <div className="group rounded-[1.5rem] border border-white/10 bg-white/[0.10] p-4 shadow-[0_14px_40px_rgba(0,0,0,0.2)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.14]">
       <Chip
         size="sm"
         variant="soft"

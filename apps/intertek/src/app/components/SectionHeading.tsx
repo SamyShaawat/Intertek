@@ -15,7 +15,7 @@ export function SectionHeading({
       <h2 className="font-display italic text-4xl font-normal leading-[1.05] text-white sm:text-5xl lg:text-[3.1rem]">
         {title}
       </h2>
-      <p className="max-w-2xl text-sm leading-7 text-white/62 sm:text-base">{description}</p>
+      <p className="max-w-2xl text-sm leading-7 text-white/68 sm:text-base">{description}</p>
     </div>
   );
 }

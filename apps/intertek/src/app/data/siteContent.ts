@@ -128,14 +128,6 @@ export const homeImages: MosaicImage[] = [
   { src: '/img/IG PHOTOS/marine-inspection-036.jpg', alt: 'Vessel lifted for inspection', label: 'Lift work' },
 ];
 
-// aboutImages: team/vessel identity — distinct from about hero (018) and filmstrip
-export const aboutImages: MosaicImage[] = [
-  { src: '/img/IG PHOTOS/marine-inspection-001.jpeg', alt: 'Marine inspection team' },
-  { src: '/img/IG PHOTOS/marine-inspection-021.jpeg', alt: 'Vessel inspection' },
-  { src: '/img/IG PHOTOS/marine-inspection-023.jpg', alt: 'Inspector boarding vessel' },
-  { src: '/img/IG PHOTOS/marine-inspection-037.jpeg', alt: 'Surveyor near hull' },
-];
-
 // servicesImages: technical/compliance work — distinct from services hero (030) and filmstrip
 export const servicesImages: MosaicImage[] = [
   { src: '/img/IG PHOTOS/marine-inspection-010.jpg', alt: 'Inspection team on deck' },

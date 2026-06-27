@@ -39,7 +39,7 @@ export function SiteHeader({
       className={[
         'fixed inset-x-0 top-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'border-b border-white/60 bg-white/82 shadow-[0_10px_40px_rgba(10,28,52,0.08)] backdrop-blur-xl'
+          ? 'border-b border-white/70 bg-white/90 shadow-[0_10px_40px_rgba(10,28,52,0.08)] backdrop-blur-xl'
           : 'border-transparent bg-transparent shadow-none',
       ].join(' ')}
     >
@@ -51,7 +51,7 @@ export function SiteHeader({
                 'flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-[1.1rem] border p-2 transition-all duration-300',
                 isScrolled
                   ? 'border-brand-navy/10 bg-white shadow-[0_10px_30px_rgba(10,28,52,0.08)]'
-                  : 'border-white/25 bg-white/12 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl',
+                  : 'border-white/25 bg-white/16 shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl',
               ].join(' ')}
             >
               <img
@@ -96,8 +96,8 @@ export function SiteHeader({
                       ? 'bg-brand-navy/5 text-brand-navy ring-1 ring-brand-navy/10'
                       : 'text-slate-500 hover:bg-brand-navy/5 hover:text-brand-navy'
                     : active
-                      ? 'bg-white/12 text-white ring-1 ring-white/20 backdrop-blur-xl'
-                      : 'text-white/75 hover:bg-white/10 hover:text-white',
+                      ? 'bg-white/16 text-white ring-1 ring-white/20 backdrop-blur-xl'
+                      : 'text-white/76 hover:bg-white/12 hover:text-white',
                 ].join(' ')}
               >
                 {item.label}
@@ -113,8 +113,8 @@ export function SiteHeader({
               className={[
                 'inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-semibold transition-all duration-300',
                 isScrolled
-                  ? 'bg-brand-navy text-white shadow-[0_10px_30px_rgba(10,28,52,0.18)] hover:-translate-y-0.5 hover:bg-brand-blue'
-                  : 'border border-white/30 bg-white/12 text-white shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl hover:bg-white/20',
+                  ? 'bg-brand-navy text-white shadow-[0_10px_30px_rgba(10,28,52,0.18)] hover:-translate-y-0.5 hover:bg-brand-red'
+                  : 'border border-white/30 bg-white/16 text-white shadow-[0_10px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl hover:bg-white/24',
               ].join(' ')}
             >
               Request contact
@@ -125,7 +125,7 @@ export function SiteHeader({
             type="button"
             className={[
               'inline-flex h-11 w-11 items-center justify-center rounded-full transition-all duration-300 md:hidden',
-              isScrolled ? 'text-slate-700 hover:bg-brand-navy/5' : 'text-white hover:bg-white/10',
+              isScrolled ? 'text-slate-700 hover:bg-brand-navy/5' : 'text-white hover:bg-white/12',
             ].join(' ')}
             aria-label={mobileOpen ? 'Close navigation' : 'Open navigation'}
             aria-expanded={mobileOpen}
@@ -141,7 +141,7 @@ export function SiteHeader({
       {mobileOpen ? (
         <div
           id="site-header-mobile-menu"
-          className="border-t border-white/10 bg-brand-navy/96 backdrop-blur-xl md:hidden"
+          className="border-t border-white/12 bg-brand-navy/98 backdrop-blur-xl md:hidden"
         >
           <div className="mx-auto max-w-[1440px] px-4 py-3 sm:px-6 lg:px-8">
             {navItems.map((item) => {
@@ -154,7 +154,7 @@ export function SiteHeader({
                   onClick={onToggleMobile}
                   className={[
                     'block rounded-2xl px-4 py-3 text-sm font-semibold transition-colors',
-                    active ? 'bg-white/10 text-white' : 'text-white/75 hover:bg-white/8 hover:text-white',
+                    active ? 'bg-white/12 text-white' : 'text-white/78 hover:bg-white/10 hover:text-white',
                   ].join(' ')}
                 >
                   {item.label}
