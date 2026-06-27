@@ -45,6 +45,6 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          source: "dist/apps/intertek/*"
+          source: "apps/intertek/dist"
           target: ${{ secrets.SSH_REMOTE_DIR }}
           strip_components: 3
