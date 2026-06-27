@@ -3,26 +3,26 @@ import type { Office } from '../pages/data';
 
 export function OfficeCard({ office }: { office: Office }) {
   return (
-    <Card className="flex h-full flex-col rounded-[1.75rem] border border-white/70 bg-white/88 shadow-[0_16px_50px_rgba(10,28,52,0.08)] backdrop-blur-xl">
+    <Card className="flex h-full flex-col rounded-[1.75rem] border border-white/10 bg-white/[0.06] shadow-[0_16px_50px_rgba(0,0,0,0.3)] backdrop-blur-xl">
       <Card.Content className="flex flex-col p-5">
         <div className="flex items-center gap-3">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-brand-navy/8 bg-white p-1.5 shadow-[0_10px_24px_rgba(10,28,52,0.06)]">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/10 p-1.5">
             <img src="/img/branding/intertek-group-mark.png" alt="" aria-hidden="true" className="h-full w-full object-contain" />
           </div>
           <div className="min-w-0">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-brand-blue">{office.label}</p>
-            <h3 className="break-words text-lg font-bold leading-6 text-brand-navy">{office.city}</h3>
-            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-red">{office.country}</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-blue-400">{office.label}</p>
+            <h3 className="break-words text-lg font-bold leading-6 text-white">{office.city}</h3>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-red-400">{office.country}</p>
           </div>
         </div>
-        <div className="mt-4 border-t border-slate-100 pt-4">
-          <address className="not-italic text-sm leading-6 text-slate-600 break-words hyphens-auto">
+        <div className="mt-4 border-t border-white/10 pt-4">
+          <address className="not-italic text-sm leading-6 text-white/72 break-words hyphens-auto">
             {office.address}
           </address>
         </div>
         <a
           href={`mailto:${office.email}`}
-          className="mt-auto self-start pt-4 text-xs font-semibold text-brand-navy transition-colors hover:text-brand-blue hover:underline"
+          className="mt-auto self-start pt-4 text-xs font-semibold text-white/72 transition-colors hover:text-red-400 hover:underline"
         >
           {office.email}
         </a>

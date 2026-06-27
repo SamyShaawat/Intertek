@@ -16,9 +16,9 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(27, 93, 191, 0.08), transparent 32%),
-    radial-gradient(circle at 20% 20%, rgba(194, 24, 58, 0.07), transparent 24%),
-    linear-gradient(180deg, #f6f7fb 0%, #eef2f7 100%);
+    radial-gradient(circle at top, rgba(27, 93, 191, 0.12), transparent 40%),
+    radial-gradient(circle at 80% 60%, rgba(194, 24, 58, 0.07), transparent 30%),
+    linear-gradient(180deg, #060d1a 0%, #0a1c34 100%);
 }
 
 ::selection {
@@ -42,6 +42,24 @@ body {
   }
 }
 
+@keyframes pan-zoom {
+  0%   { transform: scale(1.0)  translate(0%,     0%); }
+  25%  { transform: scale(1.18) translate(-3.5%, -2.5%); }
+  50%  { transform: scale(1.14) translate(2.5%,  -4%); }
+  75%  { transform: scale(1.20) translate(-2%,    2%); }
+  100% { transform: scale(1.0)  translate(0%,     0%); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-7px); }
+}
+
 .filmstrip-track {
   animation: filmstrip 40s linear infinite;
 }
@@ -50,6 +68,48 @@ body {
   animation-play-state: paused;
 }
 
+.filmstrip-track-r {
+  animation: filmstrip 36s linear infinite reverse;
+}
+
+.filmstrip-track-r:hover {
+  animation-play-state: paused;
+}
+
+.hero-img-animate {
+  animation: pan-zoom 18s ease-in-out infinite;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.marquee-track {
+  animation: marquee 34s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.float-anim {
+  animation: float 7s ease-in-out infinite;
+}
+
 .fade-up {
   animation: fade-up 700ms ease-out both;
+}
+
+@keyframes hero-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.hero-shimmer {
+  background: linear-gradient(
+    105deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.045) 50%,
+    transparent 62%
+  );
+  background-size: 200% 100%;
+  animation: hero-shimmer 9s linear infinite;
 }

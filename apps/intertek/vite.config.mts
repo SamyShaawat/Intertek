@@ -2,7 +2,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
-export default defineConfig(() => ({
+import reactScanComponentName from 'react-scan/react-component-name/vite';
+export default defineConfig(({ command }) => ({
   base: process.env.BASE_PATH || '/',
   root: import.meta.dirname,
   cacheDir: '../../node_modules/.vite/apps/intertek',
@@ -14,7 +15,7 @@ export default defineConfig(() => ({
     port: 4300,
     host: 'localhost',
   },
-  plugins: [react(), tailwindcss()],
+  plugins: [react(), tailwindcss(), ...(command === 'serve' ? [reactScanComponentName()] : [])],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [],

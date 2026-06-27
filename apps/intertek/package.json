@@ -5,7 +5,8 @@
   "dependencies": {
     "@heroui/react": "^3.2.1",
     "framer-motion": "^12.42.0",
-    "react": "^19.0.0"
+    "react": "^19.0.0",
+    "react-scan": "^0.5.7"
   },
   "devDependencies": {
     "react-doctor": "^0.5.6",

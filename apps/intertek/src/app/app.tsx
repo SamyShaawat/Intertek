@@ -47,11 +47,22 @@ function AppShell() {
   }, [location.pathname]);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden text-slate-900 antialiased">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(27,93,191,0.08),transparent_32%),radial-gradient(circle_at_20%_20%,rgba(194,24,58,0.08),transparent_24%),linear-gradient(180deg,#f7f8fb_0%,#eef2f7_100%)]"
-      />
+    <div className="relative min-h-screen overflow-x-hidden text-slate-100 antialiased">
+      {/* Creative image background */}
+      <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(160deg,#060d1a_0%,#0a1c34_55%,#050b14_100%)]" />
+        <div className="absolute -top-40 -right-40 h-[750px] w-[750px] overflow-hidden rounded-full opacity-[0.07]">
+          <img src="/img/IG PHOTOS/marine-inspection-026.jpg" alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="absolute -bottom-48 -left-48 h-[680px] w-[680px] overflow-hidden rounded-full opacity-[0.06]">
+          <img src="/img/IG PHOTOS/marine-inspection-030.jpeg" alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="absolute top-1/2 -right-24 -translate-y-1/2 h-[420px] w-[420px] overflow-hidden rounded-full opacity-[0.04]">
+          <img src="/img/IG PHOTOS/marine-inspection-018.jpeg" alt="" className="h-full w-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_45%_at_50%_0%,rgba(27,93,191,0.18),transparent)]" />
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[radial-gradient(ellipse_60%_80%_at_15%_100%,rgba(194,24,58,0.06),transparent)]" />
+      </div>
       <SiteHeader
         mobileOpen={mobileOpen}
         onToggleMobile={() => setMobileOpen((value) => !value)}

@@ -6,6 +6,7 @@ export function HeroBanner({
   title,
   description,
   image,
+  staticImage = false,
   imageAlt,
   primaryLink,
   secondaryLink,
@@ -14,6 +15,7 @@ export function HeroBanner({
   title: string[];
   description: string;
   image?: string;
+  staticImage?: boolean;
   imageAlt?: string;
   primaryLink?: { to: string; label: string };
   secondaryLink?: { to: string; label: string };
@@ -24,12 +26,25 @@ export function HeroBanner({
         <img
           src={image}
           alt={imageAlt ?? ''}
-          className="absolute inset-0 h-full w-full object-cover object-[center_28%]"
+          className={`absolute inset-0 h-full w-full object-cover object-[center_28%]${staticImage ? '' : ' hero-img-animate'}`}
           fetchPriority="high"
         />
       ) : (
         <div className="absolute inset-0 bg-brand-navy" />
       )}
+
+      {/* GPS origin stamp — Panama City founding coordinates */}
+      <div aria-hidden="true" className="absolute top-5 right-5 hidden lg:block text-right z-10">
+        <p className="font-mono text-[9px] tracking-[0.22em] text-white/30 uppercase">
+          08°58′N &nbsp; 79°32′W
+        </p>
+        <p className="font-mono text-[8px] tracking-[0.18em] text-white/18 mt-0.5 uppercase">
+          Panama City — Est. 2006
+        </p>
+      </div>
+
+      {/* light-sweep shimmer */}
+      <div aria-hidden="true" className="absolute inset-0 pointer-events-none hero-shimmer" />
 
       <div
         className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_34%),linear-gradient(180deg,rgba(4,12,24,0.08)_0%,rgba(4,12,24,0.48)_38%,rgba(4,12,24,0.88)_100%)]"

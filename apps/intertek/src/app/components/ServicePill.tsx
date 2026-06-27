@@ -2,18 +2,18 @@ import { Chip } from '@heroui/react';
 import type { ServiceCategory } from '../pages/data';
 
 const CATEGORY_COLORS: Record<ServiceCategory, { chip: string; dot: string }> = {
-  Registration: { chip: 'bg-[#0b1f3b]/8 text-[#0b1f3b] border-[#0b1f3b]/12',  dot: 'bg-[#0b1f3b]' },
-  Crew:         { chip: 'bg-amber-50 text-amber-700 border-amber-200',           dot: 'bg-amber-500' },
-  Consultancy:  { chip: 'bg-blue-50 text-[#1557bb] border-blue-200',            dot: 'bg-[#1557bb]' },
-  Safety:       { chip: 'bg-red-50 text-[#c41230] border-red-200',              dot: 'bg-[#c41230]' },
-  Surveys:      { chip: 'bg-emerald-50 text-emerald-700 border-emerald-200',    dot: 'bg-emerald-500' },
-  Inspections:  { chip: 'bg-violet-50 text-violet-700 border-violet-200',       dot: 'bg-violet-500' },
+  Registration: { chip: 'bg-white/10 text-white border-white/15',                   dot: 'bg-white/60' },
+  Crew:         { chip: 'bg-amber-500/15 text-amber-300 border-amber-500/20',       dot: 'bg-amber-400' },
+  Consultancy:  { chip: 'bg-blue-500/15 text-blue-300 border-blue-500/20',          dot: 'bg-blue-400' },
+  Safety:       { chip: 'bg-red-500/15 text-red-400 border-red-500/20',             dot: 'bg-red-400' },
+  Surveys:      { chip: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/20', dot: 'bg-emerald-400' },
+  Inspections:  { chip: 'bg-violet-500/15 text-violet-300 border-violet-500/20',    dot: 'bg-violet-400' },
 };
 
 export function ServicePill({ title, category }: { title: string; category: ServiceCategory }) {
   const colors = CATEGORY_COLORS[category];
   return (
-    <div className="group rounded-[1.5rem] border border-white/70 bg-white/88 p-4 shadow-[0_14px_40px_rgba(10,28,52,0.06)] transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-blue/15 hover:shadow-[0_18px_48px_rgba(10,28,52,0.1)]">
+    <div className="group rounded-[1.5rem] border border-white/10 bg-white/[0.06] p-4 shadow-[0_14px_40px_rgba(0,0,0,0.2)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.10]">
       <Chip
         size="sm"
         variant="soft"
@@ -24,7 +24,7 @@ export function ServicePill({ title, category }: { title: string; category: Serv
           {category}
         </span>
       </Chip>
-      <p className="mt-3 break-words text-sm font-semibold leading-6 text-brand-navy">{title}</p>
+      <p className="mt-3 break-words text-sm font-semibold leading-6 text-white/85">{title}</p>
     </div>
   );
 }

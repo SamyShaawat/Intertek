@@ -20,12 +20,12 @@ const tileVariants = [
 ] as const;
 
 const frameVariants = [
-  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_16px_40px_rgba(10,28,52,0.08)]',
-  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_16px_40px_rgba(10,28,52,0.06)]',
-  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_18px_46px_rgba(10,28,52,0.1)]',
-  'rounded-[1.5rem] border border-brand-navy/10 bg-brand-navy shadow-[0_18px_46px_rgba(10,28,52,0.14)]',
-  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_16px_40px_rgba(10,28,52,0.08)]',
-  'rounded-[1.5rem] border border-white/70 bg-white shadow-[0_16px_40px_rgba(10,28,52,0.06)]',
+  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.25)]',
+  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.2)]',
+  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_18px_46px_rgba(0,0,0,0.28)]',
+  'rounded-[1.5rem] border border-white/10 bg-brand-steel shadow-[0_18px_46px_rgba(0,0,0,0.32)]',
+  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.25)]',
+  'rounded-[1.5rem] border border-white/10 bg-brand-navy shadow-[0_16px_40px_rgba(0,0,0,0.2)]',
 ] as const;
 
 // Landscape frames get object-[center_25%] to favour upper portion of scene (where subjects are)
