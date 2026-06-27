@@ -8,10 +8,18 @@ import { AboutTimelineSection } from './about/AboutTimelineSection';
 
 export function AboutPage() {
   useSEO({
-    title: 'About Intertek Group',
+    title: 'About Intertek Group | Marine Specialists Since 2006',
     description:
-      'Intertek Group was founded in Panama in 2006 and combines maritime law, technical survey work, and compliance services across multiple jurisdictions.',
-    keywords: 'Intertek Group, Panama, maritime law, marine surveyors, class, statutory, naval architecture',
+      'Founded in Panama in 2006, Intertek Group combines maritime law, survey work, and compliance services across multiple jurisdictions.',
+    keywords: 'Intertek Group, Panama, maritime law, marine surveyors, naval architecture, compliance',
+    image: 'https://www.intertekgroup.org/img/IG%20PHOTOS/marine-inspection-018.jpeg',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      name: 'About Intertek Group',
+      description:
+        'Founded in Panama in 2006, Intertek Group combines maritime law, survey work, and compliance services across multiple jurisdictions.',
+    },
   });
 
   return (

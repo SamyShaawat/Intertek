@@ -1,8 +1,9 @@
-name: CD - Deploy to cPanel/Hostinger
+name: CD - Deploy to cPanel via SSH
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ main ] # Trigger deployment only when pushing/merging into 'main'
+    branches: [ dev ]
 
 jobs:
   deploy:
@@ -26,18 +27,24 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Generate SEO assets
+        run: pnpm --dir apps/intertek run generate:seo
+        env:
+          BASE_PATH: ${{ secrets.DEPLOY_BASE_PATH }}
+          SITE_URL: ${{ secrets.SITE_URL }}
+
       - name: Build production assets
         run: pnpm exec nx build intertek
         env:
-          BASE_PATH: ${{ secrets.DEPLOY_BASE_PATH }} # Dynamic sub-path e.g. '/' or '/intertek/'
+          BASE_PATH: ${{ secrets.DEPLOY_BASE_PATH }}
 
-      - name: FTP/SFTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload build via SSH
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.FTP_SERVER }}          # FTP server host (e.g. ftp.example.com)
-          username: ${{ secrets.FTP_USERNAME }}      # FTP user login credentials
-          password: ${{ secrets.FTP_PASSWORD }}      # FTP password or SFTP key
-          protocol: ftps                             # Use FTPS (explicit TLS) — prevents plaintext credential exposure
-          local-dir: ./dist/apps/intertek/           # Nx built files local path
-          server-dir: ${{ secrets.FTP_REMOTE_DIR }}  # Destination folder on server (e.g., /public_html/intertek/)
-          dangerous-clean-slate: false               # Keeps other folders/files intact for shared web app hosting
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "dist/apps/intertek/*"
+          target: ${{ secrets.SSH_REMOTE_DIR }}
+          strip_components: 3

@@ -28,6 +28,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Generate SEO assets
+        run: pnpm --dir apps/intertek run generate:seo
+        env:
+          SITE_URL: https://intertekgroup.org
+
       - name: Verify linter rules
         run: pnpm exec nx lint intertek
 

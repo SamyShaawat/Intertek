@@ -13,6 +13,7 @@
     "vite": "^8.0.0"
   },
   "scripts": {
-    "doctor": "react-doctor"
+    "doctor": "react-doctor",
+    "generate:seo": "node ./scripts/generate-seo-assets.mjs"
   }
 }

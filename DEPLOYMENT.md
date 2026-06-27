@@ -1,6 +1,6 @@
 # Shared Hosting Deployment Guide (cPanel, Hostinger, WHM)
 
-This project is configured as a React + TypeScript app powered by Vite and Nx, designed to run alongside multiple other applications on a shared server. 
+This project is configured as a React + TypeScript app powered by Vite and Nx, designed to run alongside multiple other applications on a shared server.
 
 Because shared hosting servers (such as those managed by cPanel, Hostinger, or WHM) run on Apache and host multiple applications in subdirectories or subdomains, you must pay attention to **routing**, **base paths**, and **isolated subdirectories**.
 
@@ -47,18 +47,23 @@ To resolve this, we have provided a preconfigured [.htaccess](apps/intertek/publ
 ---
 
 ## 4. Automatic CD (GitHub Actions)
-Our [.github/workflows/deploy.yml](.github/workflows/deploy.yml) file uses **FTP/SFTP** to upload production assets.
+Our [.github/workflows/deploy.yml](.github/workflows/deploy.yml) file uses **SSH key auth** to upload production assets.
 
 ### How to set up:
-1. Go to your GitHub Repository -> **Settings** -> **Secrets and variables** -> **Actions**.
-2. Click **New repository secret** and add:
-   * `FTP_SERVER`: The hostname of your server (e.g. `ftp.yourdomain.com` or SFTP IP address).
-   * `FTP_USERNAME`: Your FTP account username.
-   * `FTP_PASSWORD`: Your FTP account password.
-   * `FTP_REMOTE_DIR`: The destination directory path on the server where the files should be uploaded (e.g. `public_html/` or `public_html/intertek/`).
-   * `DEPLOY_BASE_PATH`: (Optional) If deploying to a subdirectory, set this secret value to your folder path (e.g., `/intertek/`). If not set, it defaults to `/`.
+1. In cPanel, open **SSH Access -> Manage SSH Keys**.
+2. Import your public key and authorize it for the cPanel account that owns the site files.
+3. In your GitHub Repository, go to **Settings -> Secrets and variables -> Actions**.
+4. Add these secrets:
+   * `SSH_HOST`: Your server IP or SSH hostname.
+   * `SSH_USER`: Your cPanel username, for example `intertekgroup`.
+   * `SSH_PORT`: Usually `22`.
+   * `SSH_PRIVATE_KEY`: The full private key text from `~/.ssh/id_ed25519`.
+   * `SSH_REMOTE_DIR`: The deploy folder on the server. Use the document root for the domain.
+   * `DEPLOY_BASE_PATH`: `/` for the root domain, or `/intertek/` for a subdirectory.
+   * `SITE_URL`: The public site URL, for example `https://intertekgroup.org`.
 
-Whenever you push code changes or merge pull requests into the `main` branch, GitHub Actions will automatically:
+Whenever you push code changes or merge pull requests into the `dev` branch, GitHub Actions will automatically:
 1. Install node dependencies.
-2. Build the production bundle.
-3. Securely upload the static files directly to your shared server directory.
+2. Generate SEO assets (`robots.txt` and `sitemap.xml`) for the deployed base path.
+3. Build the production bundle.
+4. Upload the built files over SSH to the cPanel document root.
