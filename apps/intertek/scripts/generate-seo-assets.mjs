@@ -10,6 +10,13 @@ const siteUrl = (process.env.SITE_URL || 'https://www.intertekgroup.org').replac
 const basePath = normalizeBasePath(process.env.BASE_PATH || '/');
 const siteRoot = `${siteUrl}${basePath}`;
 const today = new Date().toISOString().slice(0, 10);
+const discoveryEndpoints = {
+  issuer: siteUrl,
+  authorization_endpoint: `${siteUrl}/oauth/authorize`,
+  token_endpoint: `${siteUrl}/oauth/token`,
+  jwks_uri: `${siteUrl}/.well-known/jwks.json`,
+  grant_types_supported: ['authorization_code', 'client_credentials', 'refresh_token'],
+};
 
 const routes = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
@@ -22,7 +29,30 @@ await mkdir(publicDir, { recursive: true });
 
 await writeFile(
   join(publicDir, 'robots.txt'),
-  `User-agent: *\nAllow: /\n\nSitemap: ${siteRoot}sitemap.xml\n`,
+  `User-agent: *\nAllow: /\nContent-Signal: ai-train=no, search=yes, ai-input=no\n\nSitemap: ${siteRoot}sitemap.xml\n`,
+  'utf8',
+);
+
+await mkdir(join(publicDir, '.well-known'), { recursive: true });
+
+await writeFile(
+  join(publicDir, '.well-known', 'openid-configuration'),
+  `${JSON.stringify(
+    {
+      ...discoveryEndpoints,
+      response_types_supported: ['code'],
+      subject_types_supported: ['public'],
+      id_token_signing_alg_values_supported: ['RS256'],
+    },
+    null,
+    2,
+  )}\n`,
+  'utf8',
+);
+
+await writeFile(
+  join(publicDir, '.well-known', 'oauth-authorization-server'),
+  `${JSON.stringify(discoveryEndpoints, null, 2)}\n`,
   'utf8',
 );
 

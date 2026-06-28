@@ -1,16 +1,38 @@
 # Apache server configuration for single page React app routing (Vite + React Router)
 # Suitable for cPanel, Hostinger, and WHM shared environments
 
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "^/$" intertek_homepage
+  SetEnvIf Request_URI "^/intertek/$" intertek_homepage
+</IfModule>
+
 <IfModule mod_headers.c>
   Header always set X-Frame-Options "DENY"
   Header always set X-Content-Type-Options "nosniff"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set X-XSS-Protection "1; mode=block"
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; form-action 'self';"
+  Header always set Link "<services>; rel=\"service-doc\"; type=\"text/html\"" env=intertek_homepage
+  Header always merge Vary "Accept"
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType text/markdown .md
 </IfModule>
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  RewriteRule ^\.well-known/ - [L]
+
+  # Serve markdown snapshots to agent requests that opt into them.
+  RewriteCond %{HTTP_ACCEPT} (^|,)\s*text/markdown(\s*;q=[0-9.]+)?(\s*,|$) [NC]
+  RewriteRule ^$ /markdown/index.md [L]
+  RewriteCond %{HTTP_ACCEPT} (^|,)\s*text/markdown(\s*;q=[0-9.]+)?(\s*,|$) [NC]
+  RewriteRule ^about/?$ /markdown/about.md [L]
+  RewriteCond %{HTTP_ACCEPT} (^|,)\s*text/markdown(\s*;q=[0-9.]+)?(\s*,|$) [NC]
+  RewriteRule ^services/?$ /markdown/services.md [L]
+  RewriteCond %{HTTP_ACCEPT} (^|,)\s*text/markdown(\s*;q=[0-9.]+)?(\s*,|$) [NC]
+  RewriteRule ^contact/?$ /markdown/contact.md [L]
   
   # For root-level deployment (e.g., public_html/ or app.domain.com/):
   RewriteBase /

@@ -1,0 +1,11 @@
+; DNS-AID discovery records for intertekgroup.org.
+; ServiceMode HTTPS uses priority 1 and the target name "." as the endpoint.
+; Import this into the authoritative zone and DNSSEC-sign the zone before publishing.
+
+$ORIGIN intertekgroup.org.
+$TTL 3600
+
+_index._agents            IN HTTPS 1 . alpn="a2a,h2,h3"
+_a2a._agents              IN HTTPS 1 . alpn="a2a,h2,h3"
+_index._agents.www        IN HTTPS 1 . alpn="a2a,h2,h3"
+_a2a._agents.www          IN HTTPS 1 . alpn="a2a,h2,h3"
