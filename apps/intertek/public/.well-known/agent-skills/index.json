@@ -6,28 +6,28 @@
       "type": "archive",
       "description": "Audit and improve web accessibility following WCAG 2.2 guidelines. Use when asked to \"improve accessibility\", \"a11y audit\", \"WCAG compliance\", \"screen reader support\", \"keyboard navigation\", or \"make accessible\".",
       "url": "/.well-known/agent-skills/accessibility.tar.gz",
-      "digest": "sha256:4c0d7b6164bdb42ec7323b19e8fb992e3a52f5801510a7824b6e95c8139524e4"
+      "digest": "sha256:04e0b03633b3643865a5e2e3b4823e1c3d06bbb3864df16447ef75c5a0e0b08c"
     },
     {
       "name": "vercel-composition-patterns",
       "type": "archive",
       "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
       "url": "/.well-known/agent-skills/vercel-composition-patterns.tar.gz",
-      "digest": "sha256:62324e3ba1ed69090303040835f03fa8cc0cf2d2492ce60b6aaf3fc155ce03a1"
+      "digest": "sha256:f320821242155c44f30e2165e39d57dc0de4236b3bdba600796f00715ec53b6c"
     },
     {
       "name": "frontend-design",
       "type": "archive",
       "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
       "url": "/.well-known/agent-skills/frontend-design.tar.gz",
-      "digest": "sha256:116914271935fa36ccf3d0eb16ff0acc9f9c9632f89ded770439824e805b10d4"
+      "digest": "sha256:4087ff4103e128e567bdaab8c52892e1879feb62963a78a8503f9ecd1d3471ba"
     },
     {
       "name": "nodejs-backend-patterns",
       "type": "archive",
       "description": "Build production-ready Node.js backend services with Express/Fastify, implementing middleware patterns, error handling, authentication, database integration, and API design best practices. Use when creating Node.js servers, REST APIs, GraphQL backends, or microservices architectures.",
       "url": "/.well-known/agent-skills/nodejs-backend-patterns.tar.gz",
-      "digest": "sha256:eb0943481418ca23f8db52483a0e86848e09427b3fba10bab6d8477466c9af84"
+      "digest": "sha256:016d4121cdeba2d4164a0e57b78b0aba7a0ae952576e960b3ae39f45c5aaf360"
     },
     {
       "name": "nodejs-best-practices",
@@ -41,14 +41,14 @@
       "type": "archive",
       "description": "Use when writing Playwright tests, fixing flaky tests, debugging failures, implementing Page Object Model, configuring CI/CD, optimizing performance, mocking APIs, handling authentication or OAuth, testing accessibility (axe-core), file uploads/downloads, date/time mocking, WebSockets, geolocation, permissions, multi-tab/popup flows, mobile/responsive layouts, touch gestures, GraphQL, error handling, offline mode, multi-user collaboration, third-party services (payments, email verification), console error monitoring, global setup/teardown, test annotations (skip, fixme, slow), test tags (@smoke, @fast, @critical, filtering with --grep), project dependencies, security testing (XSS, CSRF, auth), performance budgets (Web Vitals, Lighthouse), iframes, component testing, canvas/WebGL, service workers/PWA, test coverage, i18n/localization, Electron apps, or browser extension testing. Covers E2E, component, API, visual, accessibility, security, Electron, and extension testing.",
       "url": "/.well-known/agent-skills/playwright-best-practices.tar.gz",
-      "digest": "sha256:523a86bbcf4811d9de42bceb98c4e67b532eb0d638366e7664d4bbec439ccc11"
+      "digest": "sha256:d3d731547a3d1cf1c3db5ad15f156ad50c3e8b1a5484a9c49f7a1c37b9c1dfa9"
     },
     {
       "name": "vercel-react-best-practices",
       "type": "archive",
       "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
       "url": "/.well-known/agent-skills/vercel-react-best-practices.tar.gz",
-      "digest": "sha256:892ac2bf5ce918adb312776279e639e5f2aaaa2358fe6ffa1709a75581167249"
+      "digest": "sha256:277b7a8fa273809f125a955663ae17af76dbf4cda28769809ecc1e7f57df04d5"
     },
     {
       "name": "seo",
@@ -62,7 +62,7 @@
       "type": "archive",
       "description": "Provides comprehensive Tailwind CSS utility-first styling patterns including responsive design, layout utilities, flexbox, grid, spacing, typography, colors, and modern CSS best practices. Use when styling React/Vue/Svelte components, building responsive layouts, implementing design systems, or optimizing CSS workflow.",
       "url": "/.well-known/agent-skills/tailwind-css-patterns.tar.gz",
-      "digest": "sha256:a38161fecedd51c2d89d8b06df514db99d2d8af7cd27bb786800527f68a7d820"
+      "digest": "sha256:123bcb2cde5bc6c19cfd9d7b364019977fac537c68071bcccde9c4c076bfaf86"
     },
     {
       "name": "typescript-advanced-types",
@@ -76,14 +76,21 @@
       "type": "archive",
       "description": "Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. Use when working with Vite projects, vite.config.ts, Vite plugins, or building libraries/SSR apps with Vite.",
       "url": "/.well-known/agent-skills/vite.tar.gz",
-      "digest": "sha256:2a76ad62f7da9292dbb4212dfa9c98971f5ed6b9d8b5d22e118cc2dafc7853c6"
+      "digest": "sha256:fb5c0bcedb4d537bd2cb037050f0a26d50a46231e49a35722a5d753b3ede056a"
     },
     {
       "name": "vitest",
       "type": "archive",
       "description": "Vitest fast unit testing framework powered by Vite with Jest-compatible API. Use when writing tests, mocking, configuring coverage, or working with test filtering and fixtures.",
       "url": "/.well-known/agent-skills/vitest.tar.gz",
-      "digest": "sha256:36a7889c13403a82c581bb0102e7d27c5b68fdf676fd226469c368f2821c1e8d"
+      "digest": "sha256:015e3d8513582958c1eefe83eb966b78e1f54ca4b0c9d4752c26c09fb7f31eb3"
+    },
+    {
+      "name": "react-doctor",
+      "type": "archive",
+      "description": "Use when finishing a feature, fixing a bug, before committing React code, or when the user types `/doctor`, asks to scan, triage, or clean up React diagnostics. Covers lint, accessibility, bundle size, architecture. Includes a regression check and a full local-triage workflow that fetches the canonical playbook.",
+      "url": "/.well-known/agent-skills/react-doctor.tar.gz",
+      "digest": "sha256:5f8af003179491b634807d36666d6f411274e7fd42ebc5c078d17bcb26bb74d9"
     }
   ]
 }

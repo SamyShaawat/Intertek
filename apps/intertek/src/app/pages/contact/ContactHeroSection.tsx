@@ -9,6 +9,7 @@ export function ContactHeroSection() {
       description="Reach our offices or submit an inquiry — we respond within one business day."
       image="/img/IG PHOTOS/marine-inspection-037.jpeg"
       imageAlt="Surveyor working near vessel hull"
+      imagePosition="center 10%"
       primaryLink={{ to: ROUTES.SERVICES, label: 'Explore services' }}
       secondaryLink={{ to: ROUTES.ABOUT, label: 'About company' }}
     />

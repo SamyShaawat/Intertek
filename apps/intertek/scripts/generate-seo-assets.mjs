@@ -9,8 +9,12 @@ import { createWriteStream } from 'node:fs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, '..');
 const publicDir = join(rootDir, 'public');
-const skillsSourceDir = join(rootDir, '..', '..', '.agents', 'skills');
 const skillsPublicDir = join(publicDir, '.well-known', 'agent-skills');
+const skillSourceRoots = [
+  join(rootDir, '..', '..', '.agents', 'skills'),
+  join(rootDir, '.agents', 'skills'),
+  join(rootDir, '.claude', 'skills'),
+];
 
 const siteUrl = (process.env.SITE_URL || 'https://www.intertekgroup.org').replace(/\/+$/, '');
 const basePath = normalizeBasePath(process.env.BASE_PATH || '/');
@@ -212,14 +216,20 @@ await writeFile(
 await rm(skillsPublicDir, { recursive: true, force: true });
 await mkdir(skillsPublicDir, { recursive: true });
 
-const skillEntries = await readdir(skillsSourceDir, { withFileTypes: true });
 const skills = [];
+const seenSkillNames = new Set();
 
-for (const entry of skillEntries.filter((item) => item.isDirectory()).sort((a, b) => a.name.localeCompare(b.name))) {
-  const sourceSkillDir = join(skillsSourceDir, entry.name);
+for (const sourceSkillDir of await findSkillDirectories(skillSourceRoots)) {
   const sourceSkillFile = join(sourceSkillDir, 'SKILL.md');
   const skillMarkdown = await readFile(sourceSkillFile, 'utf8');
   const { name, description } = parseSkillFrontmatter(skillMarkdown);
+
+  if (seenSkillNames.has(name)) {
+    continue;
+  }
+
+  seenSkillNames.add(name);
+
   const targetSkillDir = join(skillsPublicDir, name);
   const supportingFiles = await readdir(sourceSkillDir, { withFileTypes: true });
   const hasSupportingFiles = supportingFiles.some((item) => item.name !== 'SKILL.md');
@@ -328,6 +338,32 @@ function parseSkillFrontmatter(markdown) {
 async function writeArchive(sourceDir, targetPath) {
   const output = pipeline(createTarStream(sourceDir), createGzip(), createWriteStream(targetPath));
   await output;
+}
+
+async function findSkillDirectories(roots) {
+  const directories = [];
+
+  for (const root of roots) {
+    let entries;
+
+    try {
+      entries = await readdir(root, { withFileTypes: true });
+    } catch (error) {
+      if (error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') {
+        continue;
+      }
+
+      throw error;
+    }
+
+    for (const entry of entries) {
+      if (entry.isDirectory()) {
+        directories.push(join(root, entry.name));
+      }
+    }
+  }
+
+  return directories.sort((a, b) => a.localeCompare(b));
 }
 
 async function* createTarStream(sourceDir, prefix = '') {

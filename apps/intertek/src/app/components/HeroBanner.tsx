@@ -8,6 +8,7 @@ export function HeroBanner({
   image,
   staticImage = false,
   imageAlt,
+  imagePosition = 'center 28%',
   primaryLink,
   secondaryLink,
   variant = 'default',
@@ -19,6 +20,7 @@ export function HeroBanner({
   image?: string;
   staticImage?: boolean;
   imageAlt?: string;
+  imagePosition?: string;
   primaryLink?: { to: string; label: string };
   secondaryLink?: { to: string; label: string };
   variant?: 'default' | 'compact';
@@ -32,7 +34,8 @@ export function HeroBanner({
         <img
           src={image}
           alt={imageAlt ?? ''}
-          className={`absolute inset-0 h-full w-full object-cover object-[center_28%]${staticImage ? '' : ' hero-img-animate'}`}
+          className={`absolute inset-0 h-full w-full object-cover${staticImage ? '' : ' hero-img-animate'}`}
+          style={{ objectPosition: imagePosition }}
           fetchPriority="high"
         />
       ) : (
