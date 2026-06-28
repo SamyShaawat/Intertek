@@ -38,13 +38,28 @@ jobs:
         env:
           BASE_PATH: ${{ secrets.DEPLOY_BASE_PATH }}
 
+      - name: Validate SSH deploy secrets
+        shell: bash
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_REMOTE_DIR: ${{ secrets.SSH_REMOTE_DIR }}
+        run: |
+          for name in SSH_HOST SSH_USER SSH_PRIVATE_KEY SSH_REMOTE_DIR; do
+            if [ -z "${!name}" ]; then
+              echo "::error title=Missing deploy secret::$name is required for the SSH deploy step."
+              exit 1
+            fi
+          done
+
       - name: Upload build via SSH
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
+          port: ${{ secrets.SSH_PORT || 22 }}
           source: "apps/intertek/dist"
           target: ${{ secrets.SSH_REMOTE_DIR }}
           strip_components: 3
@@ -55,6 +70,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT }}
+          port: ${{ secrets.SSH_PORT || 22 }}
           source: "dns/intertekgroup.org.zone"
           target: ${{ secrets.SSH_REMOTE_DIR }}/dns
