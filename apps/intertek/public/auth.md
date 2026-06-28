@@ -13,6 +13,12 @@ You are an agent. This service supports agentic registration: discover -> regist
 2. Use the claim flow at `https://www.intertekgroup.org/agent/identity/claim` when you only have a user challenge.
 3. Use the access token with the `Authorization: Bearer` header.
 
+## Agent auth metadata
+
+- register_uri: `https://www.intertekgroup.org/agent/identity`
+- claim_url: `https://www.intertekgroup.org/agent/identity/claim`
+- revocation_url: `https://www.intertekgroup.org/oauth/revoke`
+
 ## Supported registration methods
 
 - anonymous

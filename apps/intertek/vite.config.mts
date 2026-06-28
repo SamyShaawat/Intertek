@@ -1,4 +1,6 @@
 /// <reference types='vitest' />
+import { cp, readdir } from 'node:fs/promises';
+import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
@@ -15,7 +17,25 @@ export default defineConfig(({ command }) => ({
     port: 4300,
     host: 'localhost',
   },
-  plugins: [react(), tailwindcss(), ...(command === 'serve' ? [reactScanComponentName()] : [])],
+  plugins: [
+    react(),
+    tailwindcss(),
+    ...(command === 'serve' ? [reactScanComponentName()] : []),
+    {
+      name: 'copy-hidden-public-assets',
+      async closeBundle() {
+        const publicDir = resolve(import.meta.dirname, 'public');
+        const outDir = resolve(import.meta.dirname, 'dist');
+
+        for (const entry of await readdir(publicDir, { withFileTypes: true })) {
+          if (!entry.name.startsWith('.')) continue;
+          await cp(resolve(publicDir, entry.name), resolve(outDir, entry.name), {
+            recursive: true,
+          });
+        }
+      },
+    },
+  ],
   // Uncomment this if you are using workers.
   // worker: {
   //  plugins: [],

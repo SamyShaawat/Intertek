@@ -25,9 +25,12 @@
     "skill": "https://www.intertekgroup.org/auth.md",
     "register_uri": "https://www.intertekgroup.org/agent/identity",
     "identity_endpoint": "https://www.intertekgroup.org/agent/identity",
+    "register_url": "https://www.intertekgroup.org/agent/identity",
     "claim_uri": "https://www.intertekgroup.org/agent/identity/claim",
     "claim_endpoint": "https://www.intertekgroup.org/agent/identity/claim",
+    "claim_url": "https://www.intertekgroup.org/agent/identity/claim",
     "revocation_uri": "https://www.intertekgroup.org/oauth/revoke",
+    "revocation_url": "https://www.intertekgroup.org/oauth/revoke",
     "events_endpoint": "https://www.intertekgroup.org/agent/event/notify",
     "supported_identity_types": [
       "anonymous",

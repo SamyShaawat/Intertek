@@ -21,8 +21,6 @@ const footerOffices = [
   { city: 'Dubai', detail: 'Mamzar, Office 117', flag: '🇦🇪' },
 ] as const;
 
-const certs = ['ISM', 'ISPS', 'ISO 9001', 'Panama Registry'] as const;
-
 const MailIcon = () => (
   <svg className="h-3.5 w-3.5 shrink-0 text-brand-red" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
@@ -128,18 +126,19 @@ export function Footer() {
 
         <Separator className="my-10 bg-white/10" />
 
-        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-          <p className="text-xs text-white/38">© {new Date().getFullYear()} Intertek Group. All rights reserved.</p>
-          <div className="flex flex-wrap gap-2">
-            {certs.map((cert) => (
-              <span
-                key={cert}
-                className="rounded-full border border-white/10 bg-white/8 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white/48"
-              >
-                {cert}
-              </span>
-            ))}
-          </div>
+        <div className="flex flex-col items-center justify-center gap-4">
+          <p className="text-center text-xs text-white/38">
+            © {new Date().getFullYear()} Intertek Group. All rights reserved. Made by
+            <a
+              href="https://rowad.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="ml-1 font-medium text-white/70 underline decoration-white/25 underline-offset-4 transition hover:text-white hover:decoration-white/55"
+            >
+              Rowad
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>

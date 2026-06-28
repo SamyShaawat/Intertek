@@ -51,13 +51,13 @@ function App() {
       {/* Creative image background */}
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(160deg,#0c1320_0%,#102235_55%,#0a131d_100%)]" />
-        <div className="absolute -top-40 -right-40 h-[750px] w-[750px] overflow-hidden rounded-full opacity-[0.10]">
+        <div className="absolute -top-28 -right-28 hidden h-[520px] w-[520px] overflow-hidden rounded-full opacity-[0.10] sm:block lg:-top-40 lg:-right-40 lg:h-[750px] lg:w-[750px]">
           <img src="/img/IG PHOTOS/marine-inspection-026.jpg" alt="" className="h-full w-full object-cover" />
         </div>
-        <div className="absolute -bottom-48 -left-48 h-[680px] w-[680px] overflow-hidden rounded-full opacity-[0.09]">
+        <div className="absolute -bottom-36 -left-36 hidden h-[480px] w-[480px] overflow-hidden rounded-full opacity-[0.09] sm:block lg:-bottom-48 lg:-left-48 lg:h-[680px] lg:w-[680px]">
           <img src="/img/IG PHOTOS/marine-inspection-030.jpeg" alt="" className="h-full w-full object-cover" />
         </div>
-        <div className="absolute top-1/2 -right-24 -translate-y-1/2 h-[420px] w-[420px] overflow-hidden rounded-full opacity-[0.07]">
+        <div className="absolute top-1/2 -right-16 hidden h-[320px] w-[320px] -translate-y-1/2 overflow-hidden rounded-full opacity-[0.07] md:block lg:-right-24 lg:h-[420px] lg:w-[420px]">
           <img src="/img/IG PHOTOS/marine-inspection-018.jpeg" alt="" className="h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_45%_at_50%_0%,rgba(79,127,166,0.22),transparent)]" />

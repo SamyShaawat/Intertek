@@ -14,6 +14,13 @@ html {
   scroll-behavior: smooth;
 }
 
+img,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
 body {
   background:
     radial-gradient(circle at top, rgba(79, 127, 166, 0.18), transparent 36%),

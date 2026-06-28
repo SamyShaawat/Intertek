@@ -56,9 +56,12 @@ const agentAuth = {
   skill: `${siteUrl}/auth.md`,
   register_uri: `${siteUrl}/agent/identity`,
   identity_endpoint: `${siteUrl}/agent/identity`,
+  register_url: `${siteUrl}/agent/identity`,
   claim_uri: `${siteUrl}/agent/identity/claim`,
   claim_endpoint: `${siteUrl}/agent/identity/claim`,
+  claim_url: `${siteUrl}/agent/identity/claim`,
   revocation_uri: `${siteUrl}/oauth/revoke`,
+  revocation_url: `${siteUrl}/oauth/revoke`,
   events_endpoint: `${siteUrl}/agent/event/notify`,
   supported_identity_types: ['anonymous', 'service_auth', 'identity_assertion'],
   identity_types_supported: ['anonymous', 'service_auth', 'identity_assertion'],
@@ -83,6 +86,12 @@ You are an agent. This service supports agentic registration: discover -> regist
 1. Start with \`${siteUrl}/agent/identity\` when you can assert an identity for a user.
 2. Use the claim flow at \`${siteUrl}/agent/identity/claim\` when you only have a user challenge.
 3. Use the access token with the \`Authorization: Bearer\` header.
+
+## Agent auth metadata
+
+- register_uri: \`${siteUrl}/agent/identity\`
+- claim_url: \`${siteUrl}/agent/identity/claim\`
+- revocation_url: \`${siteUrl}/oauth/revoke\`
 
 ## Supported registration methods
 
