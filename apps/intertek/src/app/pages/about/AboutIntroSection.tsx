@@ -59,30 +59,33 @@ export function AboutIntroSection() {
           </div>
         </div>
 
-        <div className="grid min-h-[480px] grid-cols-[1.55fr_1fr] grid-rows-2 gap-3">
-          <div className="row-span-2 overflow-hidden rounded-[2.25rem] shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
+        <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-[1.55fr_1fr] lg:grid-rows-2">
+          <div className="relative overflow-hidden rounded-[2.25rem] shadow-[0_24px_64px_rgba(0,0,0,0.45)] md:row-span-2">
             <img
               src="/img/IG PHOTOS/marine-inspection-021.jpeg"
               alt="Marine inspection team at work"
-              className="h-full w-full object-cover object-[center_30%]"
+              className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
               loading="lazy"
             />
+            <div aria-hidden="true" className="aspect-[4/3] w-full md:h-full md:aspect-auto" />
           </div>
-          <div className="overflow-hidden rounded-[2.25rem] shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
+          <div className="relative overflow-hidden rounded-[2.25rem] shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
             <img
               src="/img/branding/intertek-group-professional-cover.png"
               alt="Intertek Group professional cover"
-              className="h-full w-full object-cover object-top"
+              className="absolute inset-0 h-full w-full object-cover object-top"
               loading="lazy"
             />
+            <div aria-hidden="true" className="aspect-[4/3] w-full" />
           </div>
-          <div className="overflow-hidden rounded-[2.25rem] shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
+          <div className="relative overflow-hidden rounded-[2.25rem] shadow-[0_24px_64px_rgba(0,0,0,0.45)]">
             <img
               src="/img/IG PHOTOS/marine-inspection-004.jpg"
               alt="Marine field inspection"
-              className="h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-cover object-center"
               loading="lazy"
             />
+            <div aria-hidden="true" className="aspect-[4/3] w-full" />
           </div>
         </div>
       </section>

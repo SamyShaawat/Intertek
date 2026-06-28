@@ -28,7 +28,7 @@ export function AboutMarketsSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 gap-3 min-[420px]:grid-cols-2">
           {[
             { src: '/img/IG PHOTOS/marine-inspection-006.jpeg', label: 'Deepsea tankers' },
             { src: '/img/IG PHOTOS/marine-inspection-014.jpeg', label: 'Offshore vessels' },
@@ -39,9 +39,10 @@ export function AboutMarketsSection() {
               <img
                 src={src}
                 alt={label}
-                className="h-40 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
+              <div aria-hidden="true" className="aspect-[4/3] w-full" />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-navy/75 to-transparent" />
               <p className="absolute bottom-2 left-3 text-[10px] font-semibold uppercase tracking-widest text-white/75">{label}</p>
             </div>

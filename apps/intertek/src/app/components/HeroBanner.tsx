@@ -29,7 +29,7 @@ export function HeroBanner({
   const HeroContent = animate ? motion.div : 'div';
 
   return (
-    <section className="relative isolate flex min-h-[580px] flex-col overflow-hidden lg:min-h-[720px]">
+    <section className="relative isolate flex min-h-[520px] flex-col overflow-hidden sm:min-h-[580px] lg:min-h-[720px]">
       {image ? (
         <img
           src={image}
@@ -73,7 +73,7 @@ export function HeroBanner({
           'relative mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8',
           variant === 'compact'
             ? 'mt-0 pb-10 pt-20 sm:pb-12 sm:pt-24 lg:pb-14 lg:pt-28'
-            : 'mt-auto pb-14 sm:pb-20 lg:pb-24',
+            : 'mt-auto pb-12 pt-20 sm:pb-20 sm:pt-24 lg:pb-24',
         ].join(' ')}
         {...(animate
           ? {
@@ -93,7 +93,7 @@ export function HeroBanner({
         <h1
           className={[
             'max-w-4xl font-display italic font-normal leading-[0.98] text-white',
-            variant === 'compact' ? 'text-4xl sm:text-5xl lg:text-[4.8rem]' : 'text-5xl sm:text-6xl lg:text-[5.6rem]',
+            variant === 'compact' ? 'text-3xl sm:text-5xl lg:text-[4.8rem]' : 'text-4xl sm:text-6xl lg:text-[5.6rem]',
           ].join(' ')}
         >
           {title.map((line, i) => (

@@ -18,13 +18,13 @@ export function ContactOfficesSection() {
             {OFFICE_MAP.map(({ office, photo, coords }) => (
               <div
                 key={office.label}
-                className="group flex overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] backdrop-blur-xl shadow-[0_16px_40px_rgba(0,0,0,0.35)] transition-all duration-300 hover:border-white/20 hover:bg-white/[0.09]"
+                className="group flex flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] shadow-[0_16px_40px_rgba(0,0,0,0.35)] transition-all duration-300 hover:border-white/20 hover:bg-white/[0.09] sm:flex-row backdrop-blur-xl"
               >
-                <div className="relative w-44 shrink-0 overflow-hidden sm:w-52">
+                <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden sm:h-auto sm:w-52 sm:aspect-auto">
                   <img
                     src={photo}
                     alt={office.city}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                   />
                   <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-transparent to-brand-steel/75" />
@@ -54,17 +54,17 @@ export function ContactOfficesSection() {
         </div>
 
         <div className="grid gap-5">
-          <div className="overflow-hidden rounded-[2.25rem] border border-white/10 shadow-[0_16px_50px_rgba(0,0,0,0.25)]">
+          <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 shadow-[0_16px_50px_rgba(0,0,0,0.25)] aspect-[4/3]">
             <img
               src="/img/IG PHOTOS/marine-inspection-037.jpeg"
               alt="Surveyor near vessel hull"
-              className="aspect-[4/3] w-full object-cover object-[center_20%]"
+              className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
               loading="lazy"
             />
           </div>
           <div className="rounded-[2.25rem] border border-brand-navy/10 bg-brand-navy p-6 text-white shadow-[0_20px_70px_rgba(10,28,52,0.16)] sm:p-8">
             <SectionKicker text="Surveyors' locations" light />
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
+            <div className="mt-5 grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 sm:grid-cols-3">
               {locations.map((location) => (
                 <div
                   key={location}

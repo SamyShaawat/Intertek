@@ -6,11 +6,11 @@ export function ServicesScopeSection() {
   return (
     <ScrollReveal>
       <section className="grid gap-5 lg:grid-cols-2">
-        <div className="overflow-hidden rounded-[2.25rem] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+        <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.4)] min-h-[240px] lg:min-h-[360px]">
           <img
             src="/img/IG PHOTOS/marine-inspection-030.jpeg"
             alt="Clear vessel inspection view"
-            className="h-full min-h-[360px] w-full object-cover object-[center_34%]"
+            className="absolute inset-0 h-full w-full object-cover object-[center_34%]"
             loading="lazy"
           />
         </div>

@@ -21,15 +21,16 @@ export function ContactPresenceSection() {
           title="Surveyors across 11 countries"
           description="From Panama to the Gulf, our network of qualified surveyors covers every major shipping lane and port of call."
         />
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 sm:grid-cols-4">
           {COUNTRY_PHOTOS.map(({ country, src }) => (
             <div key={country} className="group relative overflow-hidden rounded-2xl">
               <img
                 src={src}
                 alt={`Marine inspection work — ${country}`}
-                className="h-44 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
+              <div aria-hidden="true" className="aspect-[4/3] w-full" />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent" />
               <p className="absolute bottom-3 left-4 text-sm font-bold text-white drop-shadow">{country}</p>
             </div>

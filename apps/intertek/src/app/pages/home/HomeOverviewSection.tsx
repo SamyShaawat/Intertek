@@ -35,11 +35,13 @@ export function HomeOverviewSection() {
                 See company profile
               </Link>
             </div>
-            <img
-              src="/img/IG PHOTOS/marine-inspection-015.jpg"
-              alt="Surveyors conducting vessel inspection"
-              className="h-64 w-full object-cover object-[center_32%] lg:h-full"
-            />
+            <div className="relative min-h-[280px] overflow-hidden lg:h-full">
+              <img
+                src="/img/IG PHOTOS/marine-inspection-015.jpg"
+                alt="Surveyors conducting vessel inspection"
+                className="absolute inset-0 h-full w-full object-cover object-[center_32%]"
+              />
+            </div>
           </div>
         </div>
       </section>

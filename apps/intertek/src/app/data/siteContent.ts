@@ -121,8 +121,8 @@ export const serviceHighlights = [
 // homeImages: field/port scenes — distinct from home hero (026) and filmstrip (002,004,007,009,012,016,022,031)
 export const homeImages: MosaicImage[] = [
   { src: '/img/IG PHOTOS/marine-inspection-005.jpeg', alt: 'Marine inspection at port', label: 'Field work' },
-  { src: '/img/IG PHOTOS/marine-inspection-032.jpeg', alt: 'Hull inspection work', label: 'Hull surveys' },
   { src: '/img/IG PHOTOS/marine-inspection-008.jpg', alt: 'Vessel deck inspection', label: 'Deck work' },
+  { src: '/img/IG PHOTOS/marine-inspection-032.jpeg', alt: 'Hull inspection work', label: 'Hull surveys' },
   { src: '/img/IG PHOTOS/marine-inspection-003.jpg', alt: 'Marine survey on deck', label: 'Survey' },
   { src: '/img/IG PHOTOS/marine-inspection-019.jpeg', alt: 'Inspection team at work', label: 'In the field' },
   { src: '/img/IG PHOTOS/marine-inspection-036.jpg', alt: 'Vessel lifted for inspection', label: 'Lift work' },
