@@ -1,6 +1,12 @@
 import { ScrollReveal } from '../../components/ScrollReveal';
-import { SectionKicker } from '../../components/SectionKicker';
-import { serviceHighlights } from '../../data/siteContent';
+import { SectionHeading } from '../../components/SectionHeading';
+
+const scopeItems = [
+  'ISM & ISPS services and consultancy',
+  'Class H&M services and consultancy',
+  'Statutory services and consultancy',
+  'Naval architecture and consultancy',
+];
 
 export function ServicesScopeSection() {
   return (
@@ -15,9 +21,13 @@ export function ServicesScopeSection() {
           />
         </div>
         <div className="rounded-[2.25rem] border border-white/10 bg-white/[0.10] p-6 backdrop-blur-xl sm:p-8">
-          <SectionKicker text="Service scope" />
+          <SectionHeading
+            eyebrow="Compliance"
+            title="ISM & ISPS consultancy, statutory services, and naval architecture"
+            description="Built for operators that need technical compliance, class support, and engineering advice from one maritime team."
+          />
           <div className="mt-5 space-y-3">
-            {serviceHighlights.map((item) => (
+            {scopeItems.map((item) => (
               <div
                 key={item}
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.10] px-4 py-3 transition-colors hover:bg-white/[0.14]"

@@ -8,9 +8,9 @@ export function ServicesGallerySection() {
     <ScrollReveal delay={0.05}>
       <section className="space-y-5">
         <SectionHeading
-          eyebrow="In the field"
-          title="Real inspections. Real ships."
-          description="Our surveyors operate across 11 countries covering deepsea shipping, offshore vessels, government fleets, and pleasure yachts."
+          eyebrow="Surveys"
+          title="Marine surveys, PSC inspections, and incident response"
+          description="Third-party marine surveys, pre- and post-PSC inspections, and near-miss or incident response across 11 countries."
         />
         <ImageMosaic images={servicesImages} />
       </section>

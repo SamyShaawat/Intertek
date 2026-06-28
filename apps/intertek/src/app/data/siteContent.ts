@@ -109,15 +109,6 @@ export const heroMetrics: HeroMetric[] = [
   { value: '24/7', label: 'Global response' },
 ];
 
-export const serviceHighlights = [
-  'Ships registration and mortgages',
-  'Crew documentation and endorsement',
-  'Class, statutory, and consultancy support',
-  'ISM, ISPS, and compliance work',
-  'Marine surveys and PSC inspections',
-  'Incident and near-miss attendance',
-];
-
 // homeImages: field/port scenes — distinct from home hero (026) and filmstrip (002,004,007,009,012,016,022,031)
 export const homeImages: MosaicImage[] = [
   { src: '/img/IG PHOTOS/marine-inspection-005.jpeg', alt: 'Marine inspection at port', label: 'Field work' },

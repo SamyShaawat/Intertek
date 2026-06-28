@@ -1,26 +1,26 @@
 import { ScrollReveal } from '../../components/ScrollReveal';
-import { SectionKicker } from '../../components/SectionKicker';
+import { SectionHeading } from '../../components/SectionHeading';
 
 const PROCESS = [
   {
     step: '01',
-    title: 'Submit Request',
-    body: 'Contact our office with vessel details, port of call, and required service scope.',
+    title: 'Submit request',
+    body: 'Send vessel details, crew needs, or compliance scope through the contact form.',
   },
   {
     step: '02',
-    title: 'Specialist Assigned',
-    body: 'A qualified surveyor or legal specialist is matched to your case within hours.',
+    title: 'Specialist assigned',
+    body: 'A surveyor, maritime lawyer, or technical specialist is matched to the case.',
   },
   {
     step: '03',
-    title: 'On-Site Attendance',
-    body: 'We attend the vessel at port, anchorage, or drydock — anywhere in our 11-country network.',
+    title: 'Attendance or filing',
+    body: 'We attend the vessel, file the documents, or coordinate the endorsement work required.',
   },
   {
     step: '04',
-    title: 'Report Delivered',
-    body: 'Certified documentation, survey reports, or compliance certificates issued within agreed timelines.',
+    title: 'Report delivered',
+    body: 'You receive the final report, certificate, or registration document on time.',
   },
 ];
 
@@ -33,7 +33,11 @@ export function ServicesProcessSection() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(27,93,191,0.18),transparent_44%),radial-gradient(circle_at_bottom_right,rgba(194,24,58,0.10),transparent_40%)]"
         />
         <div className="relative">
-          <SectionKicker text="How we work" light />
+          <SectionHeading
+            eyebrow="Crew"
+            title="Crew documentation, endorsement, and MLC inspections"
+            description="A simple workflow for crew paperwork, endorsement work, welfare checks, and related compliance support."
+          />
           <div className="mt-10 grid gap-0 divide-y divide-white/8 lg:grid-cols-4 lg:divide-y-0 lg:divide-x">
             {PROCESS.map(({ step, title, body }) => (
               <div key={step} className="flex gap-5 py-8 lg:flex-col lg:px-8 lg:py-0 first:lg:pl-0 last:lg:pr-0">
