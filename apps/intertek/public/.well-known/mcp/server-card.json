@@ -1,0 +1,15 @@
+{
+  "serverInfo": {
+    "name": "Intertek",
+    "version": "0.0.1"
+  },
+  "transport": {
+    "type": "http",
+    "endpoint": "https://www.intertekgroup.org/mcp"
+  },
+  "capabilities": {
+    "tools": {},
+    "resources": {},
+    "prompts": {}
+  }
+}

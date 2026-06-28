@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "accessibility",
+      "type": "archive",
+      "description": "Audit and improve web accessibility following WCAG 2.2 guidelines. Use when asked to \"improve accessibility\", \"a11y audit\", \"WCAG compliance\", \"screen reader support\", \"keyboard navigation\", or \"make accessible\".",
+      "url": "/.well-known/agent-skills/accessibility.tar.gz",
+      "digest": "sha256:4be2ecf28c7cc30f33d12a2aa3476f40dc09d4ef8c82d2b84922d3f0b3edb84b"
+    },
+    {
+      "name": "vercel-composition-patterns",
+      "type": "archive",
+      "description": "React composition patterns that scale. Use when refactoring components with boolean prop proliferation, building flexible component libraries, or designing reusable APIs. Triggers on tasks involving compound components, render props, context providers, or component architecture. Includes React 19 API changes.",
+      "url": "/.well-known/agent-skills/vercel-composition-patterns.tar.gz",
+      "digest": "sha256:bccb587fa5c76f19be10655033b686a2eca922a08298656ff6b70026028c640a"
+    },
+    {
+      "name": "frontend-design",
+      "type": "archive",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "url": "/.well-known/agent-skills/frontend-design.tar.gz",
+      "digest": "sha256:701e01ca451df941cc5cba3d9e6f50b1730d99bafb7cd14bc57ff714db645fd0"
+    },
+    {
+      "name": "nodejs-backend-patterns",
+      "type": "archive",
+      "description": "Build production-ready Node.js backend services with Express/Fastify, implementing middleware patterns, error handling, authentication, database integration, and API design best practices. Use when creating Node.js servers, REST APIs, GraphQL backends, or microservices architectures.",
+      "url": "/.well-known/agent-skills/nodejs-backend-patterns.tar.gz",
+      "digest": "sha256:f700047f4b7d1b35075b9235a79bbe3e42ad80925def87c53c5761139cd62214"
+    },
+    {
+      "name": "nodejs-best-practices",
+      "type": "skill-md",
+      "description": "Node.js development principles and decision-making. Framework selection, async patterns, security, and architecture. Teaches thinking, not copying.",
+      "url": "/.well-known/agent-skills/nodejs-best-practices/SKILL.md",
+      "digest": "sha256:555466f9a68554c1d965f0fbf9b335cf4fa37fff4bce46145a3781a17fc2a17f"
+    },
+    {
+      "name": "playwright-best-practices",
+      "type": "archive",
+      "description": "Use when writing Playwright tests, fixing flaky tests, debugging failures, implementing Page Object Model, configuring CI/CD, optimizing performance, mocking APIs, handling authentication or OAuth, testing accessibility (axe-core), file uploads/downloads, date/time mocking, WebSockets, geolocation, permissions, multi-tab/popup flows, mobile/responsive layouts, touch gestures, GraphQL, error handling, offline mode, multi-user collaboration, third-party services (payments, email verification), console error monitoring, global setup/teardown, test annotations (skip, fixme, slow), test tags (@smoke, @fast, @critical, filtering with --grep), project dependencies, security testing (XSS, CSRF, auth), performance budgets (Web Vitals, Lighthouse), iframes, component testing, canvas/WebGL, service workers/PWA, test coverage, i18n/localization, Electron apps, or browser extension testing. Covers E2E, component, API, visual, accessibility, security, Electron, and extension testing.",
+      "url": "/.well-known/agent-skills/playwright-best-practices.tar.gz",
+      "digest": "sha256:49e2089bddf5575f5348f8920964297fe6e5efa460a16bc86fa852d4a785b3ec"
+    },
+    {
+      "name": "vercel-react-best-practices",
+      "type": "archive",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal performance patterns. Triggers on tasks involving React components, Next.js pages, data fetching, bundle optimization, or performance improvements.",
+      "url": "/.well-known/agent-skills/vercel-react-best-practices.tar.gz",
+      "digest": "sha256:2ea3fed4b9581c4efb6f81890e7154499157e9eaed897b70c986c5f9552205e5"
+    },
+    {
+      "name": "seo",
+      "type": "skill-md",
+      "description": "Optimize for search engine visibility and ranking. Use when asked to \"improve SEO\", \"optimize for search\", \"fix meta tags\", \"add structured data\", \"sitemap optimization\", or \"search engine optimization\".",
+      "url": "/.well-known/agent-skills/seo/SKILL.md",
+      "digest": "sha256:f3e546112a3168515486c533d13156a1d4dcd9402f3d116730cef573a20e2804"
+    },
+    {
+      "name": "tailwind-css-patterns",
+      "type": "archive",
+      "description": "Provides comprehensive Tailwind CSS utility-first styling patterns including responsive design, layout utilities, flexbox, grid, spacing, typography, colors, and modern CSS best practices. Use when styling React/Vue/Svelte components, building responsive layouts, implementing design systems, or optimizing CSS workflow.",
+      "url": "/.well-known/agent-skills/tailwind-css-patterns.tar.gz",
+      "digest": "sha256:0fd8983daea82bd8254873417896e344daaf08c59a8587b5c7ccfb46a3164840"
+    },
+    {
+      "name": "typescript-advanced-types",
+      "type": "skill-md",
+      "description": "Master TypeScript's advanced type system including generics, conditional types, mapped types, template literals, and utility types for building type-safe applications. Use when implementing complex type logic, creating reusable type utilities, or ensuring compile-time type safety in TypeScript projects.",
+      "url": "/.well-known/agent-skills/typescript-advanced-types/SKILL.md",
+      "digest": "sha256:c142f64de35a7c7518e62d4a5c5b18800bbe4391be14ba45a5d049adfcf01c57"
+    },
+    {
+      "name": "vite",
+      "type": "archive",
+      "description": "Vite build tool configuration, plugin API, SSR, and Vite 8 Rolldown migration. Use when working with Vite projects, vite.config.ts, Vite plugins, or building libraries/SSR apps with Vite.",
+      "url": "/.well-known/agent-skills/vite.tar.gz",
+      "digest": "sha256:50e2519530ee3a55f4b5f6b019e26c9ace1d92ba1f0fe49c019f9ead30db8903"
+    },
+    {
+      "name": "vitest",
+      "type": "archive",
+      "description": "Vitest fast unit testing framework powered by Vite with Jest-compatible API. Use when writing tests, mocking, configuring coverage, or working with test filtering and fixtures.",
+      "url": "/.well-known/agent-skills/vitest.tar.gz",
+      "digest": "sha256:8702b10b98e46b2832a0572ead8399a2cec39937945792fc99c96b6342c1131d"
+    }
+  ]
+}

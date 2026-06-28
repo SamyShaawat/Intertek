@@ -31,7 +31,10 @@ export function ContactInquiryFormSection() {
 
   return (
     <ScrollReveal>
-      <section className="rounded-[2.25rem] border border-white/10 bg-white/[0.06] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:p-8 lg:p-10">
+      <section
+        id="contact-inquiry-form"
+        className="rounded-[2.25rem] border border-white/10 bg-white/[0.06] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:p-8 lg:p-10"
+      >
         <SectionKicker text="Send an inquiry" />
         <h2 className="mt-3 text-2xl font-black tracking-tight text-white sm:text-3xl">
           Get in touch with our team

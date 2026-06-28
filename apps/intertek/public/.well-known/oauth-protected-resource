@@ -1,0 +1,14 @@
+{
+  "resource": "https://www.intertekgroup.org/",
+  "resource_name": "Intertek Group",
+  "resource_documentation": "https://www.intertekgroup.org/auth.md",
+  "authorization_servers": [
+    "https://www.intertekgroup.org"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
+  "scopes_supported": [
+    "public.read"
+  ]
+}

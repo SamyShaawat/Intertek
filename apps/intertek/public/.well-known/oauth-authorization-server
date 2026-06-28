@@ -1,11 +1,61 @@
 {
+  "resource": "https://www.intertekgroup.org/",
+  "resource_name": "Intertek Group",
+  "resource_documentation": "https://www.intertekgroup.org/auth.md",
+  "authorization_servers": [
+    "https://www.intertekgroup.org"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ],
+  "scopes_supported": [
+    "public.read"
+  ],
   "issuer": "https://www.intertekgroup.org",
   "authorization_endpoint": "https://www.intertekgroup.org/oauth/authorize",
   "token_endpoint": "https://www.intertekgroup.org/oauth/token",
+  "revocation_endpoint": "https://www.intertekgroup.org/oauth/revoke",
   "jwks_uri": "https://www.intertekgroup.org/.well-known/jwks.json",
   "grant_types_supported": [
     "authorization_code",
     "client_credentials",
     "refresh_token"
-  ]
+  ],
+  "agent_auth": {
+    "skill": "https://www.intertekgroup.org/auth.md",
+    "register_uri": "https://www.intertekgroup.org/agent/identity",
+    "identity_endpoint": "https://www.intertekgroup.org/agent/identity",
+    "claim_uri": "https://www.intertekgroup.org/agent/identity/claim",
+    "claim_endpoint": "https://www.intertekgroup.org/agent/identity/claim",
+    "revocation_uri": "https://www.intertekgroup.org/oauth/revoke",
+    "events_endpoint": "https://www.intertekgroup.org/agent/event/notify",
+    "supported_identity_types": [
+      "anonymous",
+      "service_auth",
+      "identity_assertion"
+    ],
+    "identity_types_supported": [
+      "anonymous",
+      "service_auth",
+      "identity_assertion"
+    ],
+    "supported_credential_types": [
+      "access_token",
+      "identity_assertion",
+      "claim_token"
+    ],
+    "credential_types_supported": [
+      "access_token",
+      "identity_assertion",
+      "claim_token"
+    ],
+    "identity_assertion": {
+      "assertion_types_supported": [
+        "urn:ietf:params:oauth:token-type:id-jag"
+      ]
+    },
+    "events_supported": [
+      "https://schemas.workos.com/events/agent/auth/identity/assertion/revoked"
+    ]
+  }
 }

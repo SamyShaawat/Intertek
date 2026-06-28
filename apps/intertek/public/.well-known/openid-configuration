@@ -2,6 +2,7 @@
   "issuer": "https://www.intertekgroup.org",
   "authorization_endpoint": "https://www.intertekgroup.org/oauth/authorize",
   "token_endpoint": "https://www.intertekgroup.org/oauth/token",
+  "revocation_endpoint": "https://www.intertekgroup.org/oauth/revoke",
   "jwks_uri": "https://www.intertekgroup.org/.well-known/jwks.json",
   "grant_types_supported": [
     "authorization_code",

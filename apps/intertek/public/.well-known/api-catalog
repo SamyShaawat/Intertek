@@ -1,0 +1,24 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.intertekgroup.org/api/",
+      "link": [
+        {
+          "rel": "service-desc",
+          "href": "https://www.intertekgroup.org/api/openapi.json",
+          "type": "application/vnd.oai.openapi+json"
+        },
+        {
+          "rel": "service-doc",
+          "href": "https://www.intertekgroup.org/api/",
+          "type": "text/html"
+        },
+        {
+          "rel": "status",
+          "href": "https://www.intertekgroup.org/api/status",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

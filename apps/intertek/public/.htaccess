@@ -20,6 +20,19 @@
   AddType text/markdown .md
 </IfModule>
 
+<FilesMatch "^api-catalog$">
+  <IfModule mod_headers.c>
+    Header set Content-Type "application/linkset+json; profile=\"https://www.rfc-editor.org/info/rfc9727\""
+    Header always set Link "</.well-known/api-catalog>; rel=\"api-catalog\"; type=\"application/linkset+json\""
+  </IfModule>
+</FilesMatch>
+
+<FilesMatch "^status$">
+  <IfModule mod_headers.c>
+    Header set Content-Type "application/json"
+  </IfModule>
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteRule ^\.well-known/ - [L]
