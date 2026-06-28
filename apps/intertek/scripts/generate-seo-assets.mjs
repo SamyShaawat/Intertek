@@ -5,7 +5,6 @@ import { fileURLToPath } from 'node:url';
 import { createGzip } from 'node:zlib';
 import { pipeline } from 'node:stream/promises';
 import { createWriteStream } from 'node:fs';
-import tar from 'tar-stream';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, '..');
@@ -327,16 +326,11 @@ function parseSkillFrontmatter(markdown) {
 }
 
 async function writeArchive(sourceDir, targetPath) {
-  const pack = tar.pack();
-  const output = pipeline(pack, createGzip(), createWriteStream(targetPath));
-
-  await appendTarDirectory(pack, sourceDir, '');
-  pack.finalize();
-
+  const output = pipeline(createTarStream(sourceDir), createGzip(), createWriteStream(targetPath));
   await output;
 }
 
-async function appendTarDirectory(pack, sourceDir, prefix) {
+async function* createTarStream(sourceDir, prefix = '') {
   const entries = await readdir(sourceDir, { withFileTypes: true });
 
   for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name))) {
@@ -344,7 +338,7 @@ async function appendTarDirectory(pack, sourceDir, prefix) {
     const archivePath = prefix ? `${prefix}/${entry.name}` : entry.name;
 
     if (entry.isDirectory()) {
-      await appendTarDirectory(pack, sourcePath, archivePath);
+      yield* createTarStream(sourcePath, archivePath);
       continue;
     }
 
@@ -353,6 +347,48 @@ async function appendTarDirectory(pack, sourceDir, prefix) {
     }
 
     const content = await readFile(sourcePath);
-    pack.entry({ name: archivePath, size: content.length, mode: 0o644 }, content);
+    yield createTarEntry(archivePath, content);
   }
+
+  if (!prefix) {
+    yield Buffer.alloc(1024);
+  }
+}
+
+function createTarEntry(name, content) {
+  const header = Buffer.alloc(512, 0);
+  const size = content.length;
+
+  writeTarString(header, name, 0, 100);
+  writeTarOctal(header, 0o644, 100, 8);
+  writeTarOctal(header, 0, 108, 8);
+  writeTarOctal(header, 0, 116, 8);
+  writeTarOctal(header, size, 124, 12);
+  writeTarOctal(header, Math.floor(Date.now() / 1000), 136, 12);
+  header[156] = '0'.charCodeAt(0);
+  writeTarString(header, 'ustar', 257, 6);
+  writeTarString(header, '00', 263, 2);
+
+  for (let index = 148; index < 156; index += 1) {
+    header[index] = 0x20;
+  }
+
+  let checksum = 0;
+  for (const byte of header) {
+    checksum += byte;
+  }
+  writeTarOctal(header, checksum, 148, 8);
+
+  const padding = (512 - (size % 512)) % 512;
+  return Buffer.concat([header, content, Buffer.alloc(padding, 0)]);
+}
+
+function writeTarString(buffer, value, offset, length) {
+  buffer.write(value, offset, Math.min(Buffer.byteLength(value), length), 'utf8');
+}
+
+function writeTarOctal(buffer, value, offset, length) {
+  const octal = value.toString(8).padStart(length - 1, '0');
+  buffer.write(octal, offset, Math.min(Buffer.byteLength(octal), length - 1), 'ascii');
+  buffer[offset + length - 1] = 0;
 }
