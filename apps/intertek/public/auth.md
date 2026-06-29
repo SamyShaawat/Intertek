@@ -9,15 +9,15 @@ You are an agent. This service supports agentic registration: discover -> regist
 
 ## Register
 
-1. Start with `https://www.intertekgroup.org/agent/identity` when you can assert an identity for a user.
-2. Use the claim flow at `https://www.intertekgroup.org/agent/identity/claim` when you only have a user challenge.
+1. Start with `https://intertekgroup.org/agent/identity` when you can assert an identity for a user.
+2. Use the claim flow at `https://intertekgroup.org/agent/identity/claim` when you only have a user challenge.
 3. Use the access token with the `Authorization: Bearer` header.
 
 ## Agent auth metadata
 
-- register_uri: `https://www.intertekgroup.org/agent/identity`
-- claim_url: `https://www.intertekgroup.org/agent/identity/claim`
-- revocation_url: `https://www.intertekgroup.org/oauth/revoke`
+- register_uri: `https://intertekgroup.org/agent/identity`
+- claim_url: `https://intertekgroup.org/agent/identity/claim`
+- revocation_url: `https://intertekgroup.org/oauth/revoke`
 
 ## Supported registration methods
 
@@ -30,4 +30,3 @@ You are an agent. This service supports agentic registration: discover -> regist
 - access_token
 - identity_assertion
 - claim_token
-

@@ -12,7 +12,7 @@ export function AboutPage() {
     description:
       'Founded in Panama in 2006, Intertek Group combines maritime law, survey work, and compliance services across multiple jurisdictions.',
     keywords: 'Intertek Group, Panama, maritime law, marine surveyors, naval architecture, compliance',
-    image: 'https://www.intertekgroup.org/img/IG%20PHOTOS/marine-inspection-018.jpeg',
+    image: 'https://intertekgroup.org/img/IG%20PHOTOS/marine-inspection-018.jpeg',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',

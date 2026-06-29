@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Content-Signal: ai-train=no, search=yes, ai-input=no
 
-Sitemap: https://www.intertekgroup.org/sitemap.xml
+Sitemap: https://intertekgroup.org/sitemap.xml

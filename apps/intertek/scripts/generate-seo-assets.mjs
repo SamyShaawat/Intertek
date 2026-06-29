@@ -16,7 +16,7 @@ const skillSourceRoots = [
   join(rootDir, '.claude', 'skills'),
 ];
 
-const siteUrl = (process.env.SITE_URL || 'https://www.intertekgroup.org').replace(/\/+$/, '');
+const siteUrl = (process.env.SITE_URL || 'https://intertekgroup.org').replace(/\/+$/, '');
 const basePath = normalizeBasePath(process.env.BASE_PATH || '/');
 const siteRoot = `${siteUrl}${basePath}`;
 const today = new Date().toISOString().slice(0, 10);

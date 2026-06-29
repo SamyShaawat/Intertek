@@ -11,7 +11,7 @@ export interface SEOProps {
   schema?: JsonValue;
 }
 
-const DEFAULT_IMAGE = 'https://www.intertekgroup.org/img/IG%20PHOTOS/marine-inspection-037.jpeg';
+const DEFAULT_IMAGE = 'https://intertekgroup.org/img/IG%20PHOTOS/marine-inspection-037.jpeg';
 
 type JsonPrimitive = string | number | boolean | null;
 type JsonValue = JsonPrimitive | JsonValue[] | { [key: string]: JsonValue };

@@ -15,7 +15,7 @@ export function HomePage() {
     description:
       'Intertek Group delivers ship registration, marine surveys, ISM/ISPS compliance, and naval architecture across 11 countries.',
     keywords: 'marine registration, marine surveys, ISM ISPS, naval architecture, ship registration, Panama',
-    image: 'https://www.intertekgroup.org/img/IG%20PHOTOS/marine-inspection-026.jpg',
+    image: 'https://intertekgroup.org/img/IG%20PHOTOS/marine-inspection-026.jpg',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
