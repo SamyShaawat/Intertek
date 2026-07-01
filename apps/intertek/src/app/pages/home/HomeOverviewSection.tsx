@@ -15,7 +15,11 @@ export function HomeOverviewSection() {
             <SectionKicker text="What we do" />
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {services.slice(0, 6).map((service) => (
-                <ServicePill key={service.title} title={service.title} category={service.category} />
+                <ServicePill
+                  key={service.title}
+                  title={service.title}
+                  category={service.category}
+                />
               ))}
             </div>
           </Card.Content>
@@ -29,7 +33,9 @@ export function HomeOverviewSection() {
                 One coordinated model. Three specialized entities.
               </h2>
               <p className="max-w-md text-sm leading-7 text-white/80">
-                From registration in Panama to third-party surveys in the Gulf — every service runs under the same oversight standard, with the same team accountability.
+                From registration in Panama to third-party surveys in the Gulf —
+                every service runs under the same oversight standard, with the
+                same team accountability.
               </p>
               <Link
                 to={ROUTES.ABOUT}
@@ -40,7 +46,7 @@ export function HomeOverviewSection() {
             </div>
             <div className="relative min-h-[280px] overflow-hidden lg:h-full">
               <img
-                src="/img/IG PHOTOS/marine-inspection-015.jpg"
+                src="/img/generated/ai-marine-graphic-12.png"
                 alt="Surveyors conducting vessel inspection"
                 className="absolute inset-0 h-full w-full object-cover object-[center_32%]"
               />
