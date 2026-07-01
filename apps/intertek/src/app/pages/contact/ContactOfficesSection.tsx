@@ -3,10 +3,9 @@ import { SectionKicker } from '../../components/SectionKicker';
 import { locations, offices } from '../../data/siteContent';
 
 const OFFICE_MAP = [
-  { office: offices[0], photo: '/img/IG PHOTOS/marine-inspection-026.jpg', coords: '08°58′N  79°32′W' },
-  { office: offices[1], photo: '/img/IG PHOTOS/marine-inspection-009.jpeg', 
-    coords: '43°35′N  79°38′W' },
-  { office: offices[2], photo: '/img/IG PHOTOS/marine-inspection-017.jpg', coords: '25°11′N  55°16′E' },
+  { office: offices[0], coords: '08°58′N  79°32′W' },
+  { office: offices[1], coords: '43°35′N  79°38′W' },
+  { office: offices[2], coords: '25°11′N  55°16′E' },
 ] as const;
 
 export function ContactOfficesSection() {
@@ -16,20 +15,33 @@ export function ContactOfficesSection() {
         <div className="space-y-3">
           <SectionKicker text="Offices" />
           <div className="space-y-3">
-            {OFFICE_MAP.map(({ office, photo, coords }) => (
+            {OFFICE_MAP.map(({ office, coords }) => (
               <div
                 key={office.label}
                 className="group flex flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] shadow-[0_16px_40px_rgba(0,0,0,0.35)] transition-all duration-300 hover:border-white/20 hover:bg-white/[0.09] sm:flex-row backdrop-blur-xl"
               >
                 <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden sm:h-auto sm:w-52 sm:aspect-auto">
-                  <img
-                    src={photo}
-                    alt={office.city}
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-transparent to-brand-steel/75" />
-                  <p className="absolute bottom-3 left-3 font-mono text-[7px] tracking-[0.18em] text-white/35 uppercase">
+                  <div className="absolute inset-0 grid place-items-center bg-gradient-to-br from-brand-navy via-brand-steel to-slate-950">
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      className="h-16 w-16 drop-shadow-[0_10px_20px_rgba(0,0,0,0.35)]"
+                    >
+                      <path
+                        d="M12 22s6-5.6 6-12a6 6 0 1 0-12 0c0 6.4 6 12 6 12Z"
+                        fill="#DB4437"
+                      />
+                      <circle cx="12" cy="10" r="2.6" fill="#fff" />
+                      <path
+                        d="M12 4.2a5.8 5.8 0 0 1 5.8 5.8c0 4.1-3.2 8.2-5.8 10.9-2.6-2.7-5.8-6.8-5.8-10.9A5.8 5.8 0 0 1 12 4.2Z"
+                        fill="none"
+                        stroke="#4285F4"
+                        strokeWidth="1.1"
+                        opacity="0.75"
+                      />
+                    </svg>
+                  </div>
+                  <p className="absolute bottom-3 left-3 font-mono text-[7px] uppercase tracking-[0.18em] text-white/35">
                     {coords}
                   </p>
                 </div>
