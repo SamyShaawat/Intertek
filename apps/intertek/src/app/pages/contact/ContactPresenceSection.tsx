@@ -1,16 +1,7 @@
 import { ScrollReveal } from '../../components/ScrollReveal';
 import { SectionHeading } from '../../components/SectionHeading';
 
-const COUNTRY_PHOTOS: { country: string; src: string }[] = [
-  { country: 'Panama', src: '/img/IG PHOTOS/marine-inspection-013.jpg' },
-  { country: 'UAE', src: '/img/IG PHOTOS/marine-inspection-017.jpg' },
-  { country: 'Turkey', src: '/img/IG PHOTOS/marine-inspection-027.jpg' },
-  { country: 'Italy', src: '/img/IG PHOTOS/marine-inspection-004.jpg' },
-  { country: 'Egypt', src: '/img/IG PHOTOS/marine-inspection-002.jpeg' },
-  { country: 'Belgium', src: '/img/IG PHOTOS/marine-inspection-007.jpeg' },
-  { country: 'Canada', src: '/img/IG PHOTOS/marine-inspection-009.jpeg' },
-  { country: 'Saudi Arabia', src: '/img/IG PHOTOS/marine-inspection-012.jpeg' },
-];
+const COUNTRY_NAMES = ['Panama', 'UAE', 'Turkey', 'Italy', 'Egypt', 'Belgium', 'Canada', 'Saudi Arabia'];
 
 export function ContactPresenceSection() {
   return (
@@ -18,21 +9,16 @@ export function ContactPresenceSection() {
       <section className="space-y-5">
         <SectionHeading
           eyebrow="Global presence"
-          title="Surveyors across 11 countries"
-          description="From Panama to the Gulf, our network of qualified surveyors covers every major shipping lane and port of call."
+          title="Surveyors across core locations"
+          description="From Panama to the Gulf, our network of qualified surveyors covers the main shipping lanes and port calls."
         />
         <div className="grid grid-cols-1 gap-3 min-[420px]:grid-cols-2 sm:grid-cols-4">
-          {COUNTRY_PHOTOS.map(({ country, src }) => (
-            <div key={country} className="group relative overflow-hidden rounded-2xl">
-              <img
-                src={src}
-                alt={`Marine inspection work — ${country}`}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                loading="lazy"
-              />
-              <div aria-hidden="true" className="aspect-[4/3] w-full" />
-              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-brand-navy/20 to-transparent" />
-              <p className="absolute bottom-3 left-4 text-sm font-bold text-white drop-shadow">{country}</p>
+          {COUNTRY_NAMES.map((country) => (
+            <div
+              key={country}
+              className="rounded-2xl border border-white/10 bg-white/[0.08] px-4 py-5 text-center text-sm font-semibold text-white/85"
+            >
+              {country}
             </div>
           ))}
         </div>

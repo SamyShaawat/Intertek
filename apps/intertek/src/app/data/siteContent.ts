@@ -1,5 +1,3 @@
-import type { MosaicImage } from '../components/ImageMosaic';
-
 export type ServiceCategory =
   | 'Registration'
   | 'Crew'
@@ -18,6 +16,7 @@ export interface Subsidiary {
   logo: string;
   tagline: string;
   description: string;
+  image?: string;
 }
 
 export interface Office {
@@ -26,6 +25,7 @@ export interface Office {
   country: string;
   address: string;
   email: string;
+  logo?: string;
 }
 
 export interface HeroMetric {
@@ -66,6 +66,7 @@ export const subsidiaries: Subsidiary[] = [
     logo: '/img/branding/intertek-maritime-logo.png',
     tagline: 'ISM, ISPS, NAVCOM, and GMDSS',
     description: 'Operational safety, third-party surveys, and compliance support across the region.',
+    image: '/img/branding/marine-inspection-020.jpeg',
   },
 ];
 
@@ -76,6 +77,7 @@ export const offices: Office[] = [
     country: 'Panama',
     address: 'Calle 56 Marbella, Panama City',
     email: 'legal@intertekgroup.org',
+    logo: '/img/branding/legal-marine-tek-logo.png',
   },
   {
     label: 'North America',
@@ -83,13 +85,15 @@ export const offices: Office[] = [
     country: 'Canada',
     address: '2386 Poplar Cres, L5J4H3, Mississauga, Ontario',
     email: 'aimy@intertekgroup.org',
+    logo: '/img/branding/itmb-logo.png',
   },
   {
     label: 'Middle East',
     city: 'Dubai',
     country: 'UAE',
-    address: 'Mohammad bin Rashid Bldg, Office 117, Mamzar, Dubai',
+    address: 'Mohammad bin Rashid Bldg, Mamzar, Dubai',
     email: 'aimy@intertekgroup.org',
+    logo: '/img/branding/intertek-maritime-logo.png',
   },
 ];
 
@@ -105,26 +109,7 @@ export const locations = ['Panama', 'Canada', 'UAE', 'Turkey', 'Italy', 'Egypt',
 export const heroMetrics: HeroMetric[] = [
   { value: '2006', label: 'Founded in Panama' },
   { value: '3', label: 'Specialized entities' },
-  { value: '11', label: 'Surveyor countries' },
   { value: '24/7', label: 'Global response' },
 ];
 
-// homeImages: field/port scenes — distinct from home hero (026) and filmstrip (002,004,007,009,012,016,022,031)
-export const homeImages: MosaicImage[] = [
-  { src: '/img/IG PHOTOS/marine-inspection-005.jpeg', alt: 'Marine inspection at port', label: 'Field work' },
-  { src: '/img/IG PHOTOS/marine-inspection-008.jpg', alt: 'Vessel deck inspection', label: 'Deck work' },
-  { src: '/img/IG PHOTOS/marine-inspection-032.jpeg', alt: 'Hull inspection work', label: 'Hull surveys' },
-  { src: '/img/IG PHOTOS/marine-inspection-003.jpg', alt: 'Marine survey on deck', label: 'Survey' },
-  { src: '/img/IG PHOTOS/marine-inspection-019.jpeg', alt: 'Inspection team at work', label: 'In the field' },
-  { src: '/img/IG PHOTOS/marine-inspection-036.jpg', alt: 'Vessel lifted for inspection', label: 'Lift work' },
-];
-
-// servicesImages: technical/compliance work — distinct from services hero (030) and filmstrip
-export const servicesImages: MosaicImage[] = [
-  { src: '/img/IG PHOTOS/marine-inspection-010.jpg', alt: 'Inspection team on deck' },
-  { src: '/img/IG PHOTOS/marine-inspection-038.jpg', alt: 'Surveyors at work on deck' },
-  { src: '/img/IG PHOTOS/marine-inspection-029.jpeg', alt: 'Close inspection work' },
-  { src: '/img/IG PHOTOS/marine-inspection-033.jpeg', alt: 'Technical inspection' },
-  { src: '/img/IG PHOTOS/marine-inspection-034.jpeg', alt: 'Marine compliance check' },
-  { src: '/img/IG PHOTOS/marine-inspection-035.jpeg', alt: 'Surveyor on vessel' },
-];
+// ponytail: keep the source data lean; images were removed from the simplified pages.

@@ -1,6 +1,6 @@
 # Contact Intertek Group
 
-Reach the team in Panama City, Mississauga, and Dubai, with surveyor presence across 11 countries.
+Reach the team in Panama City, Mississauga, and Dubai, with surveyor presence across core locations.
 
 ## Offices
 
@@ -11,11 +11,10 @@ Reach the team in Panama City, Mississauga, and Dubai, with surveyor presence ac
   - 2386 Poplar Cres, L5J4H3, Mississauga, Ontario
   - aimy@intertekgroup.org
 - Middle East, Dubai, UAE
-  - Mohammad bin Rashid Bldg, Office 117, Mamzar, Dubai
+  - Mohammad bin Rashid Bldg, Mamzar, Dubai
   - aimy@intertekgroup.org
 
 ## Inquiry
 
 - Email: legal@intertekgroup.org
 - Coverage: Panama, Canada, UAE, Turkey, Italy, Egypt, Syria, Belgium, Algeria, Lebanon, KSA
-

@@ -4,7 +4,8 @@ import { locations, offices } from '../../data/siteContent';
 
 const OFFICE_MAP = [
   { office: offices[0], photo: '/img/IG PHOTOS/marine-inspection-026.jpg', coords: '08°58′N  79°32′W' },
-  { office: offices[1], photo: '/img/IG PHOTOS/marine-inspection-009.jpeg', coords: '43°35′N  79°38′W' },
+  { office: offices[1], photo: '/img/IG PHOTOS/marine-inspection-009.jpeg', 
+    coords: '43°35′N  79°38′W' },
   { office: offices[2], photo: '/img/IG PHOTOS/marine-inspection-017.jpg', coords: '25°11′N  55°16′E' },
 ] as const;
 

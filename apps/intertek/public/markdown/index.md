@@ -2,7 +2,7 @@
 
 Marine Registration, Surveys & Compliance.
 
-Founded in Panama in 2006, Intertek Group supports ship registration, marine surveys, ISM/ISPS compliance, and naval architecture across 11 countries.
+Founded in Panama in 2006, Intertek Group supports ship registration, marine surveys, ISM/ISPS compliance, and naval architecture across Panama, Canada, the UAE, and partner locations.
 
 ## What we do
 
@@ -22,7 +22,7 @@ Founded in Panama in 2006, Intertek Group supports ship registration, marine sur
 ## Coverage
 
 - 24/7 global response
-- Surveyor presence in 11 countries
+- Surveyor presence across core locations
 - Core offices in Panama City, Mississauga, and Dubai
 
 ## Subsidiaries
@@ -30,4 +30,3 @@ Founded in Panama in 2006, Intertek Group supports ship registration, marine sur
 - Legal Marine Tek
 - Intertek Maritime Bureau
 - Intertek Maritime Middle East
-

@@ -26,7 +26,7 @@ export function HomeWhyIntertekSection() {
               {
                 n: '03',
                 title: '24/7 Global Coverage',
-                body: 'Surveyor presence across 11 countries and three time zones. Incident response and PSC attendance without waiting for business hours.',
+                body: 'Surveyor presence across core locations and three time zones. Incident response and PSC attendance without waiting for business hours.',
               },
             ].map(({ n, title, body }) => (
               <div key={n} className="flex gap-5">

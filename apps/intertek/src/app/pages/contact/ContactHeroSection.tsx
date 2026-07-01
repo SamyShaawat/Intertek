@@ -5,7 +5,7 @@ export function ContactHeroSection() {
   return (
     <HeroBanner
       eyebrow="Contact"
-      title={['Three offices.', 'Eleven surveyor', 'countries.']}
+      title={['Three offices.', 'One team.']}
       description="Reach our offices or submit an inquiry — we respond within one business day."
       image="/img/IG PHOTOS/marine-inspection-037.jpeg"
       imageAlt="Surveyor working near vessel hull"

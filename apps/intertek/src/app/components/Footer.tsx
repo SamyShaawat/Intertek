@@ -10,15 +10,15 @@ const footerLinks = [
 ] as const;
 
 const footerStats = [
-  { label: 'Countries', value: '11+' },
-  { label: 'Years Active', value: '19+' },
+  { label: 'Founded', value: '2006' },
+  { label: 'Entities', value: '3' },
   { label: 'Availability', value: '24/7' },
 ] as const;
 
 const footerOffices = [
   { city: 'Panama City', detail: 'Calle 56 Marbella', flag: '🇵🇦' },
   { city: 'Mississauga', detail: '2386 Poplar Cres, Ontario', flag: '🇨🇦' },
-  { city: 'Dubai', detail: 'Mamzar, Office 117', flag: '🇦🇪' },
+  { city: 'Dubai', detail: 'Mamzar', flag: '🇦🇪' },
 ] as const;
 
 const MailIcon = () => (
@@ -55,7 +55,7 @@ export function Footer() {
             </div>
 
             <p className="max-w-sm text-sm leading-7 text-white/66">
-              Maritime registration, survey, consultancy, and compliance. Trusted across 11 countries since 2006.
+              Maritime registration, survey, consultancy, and compliance. Trusted since 2006.
             </p>
 
             <div className="flex flex-wrap gap-2">

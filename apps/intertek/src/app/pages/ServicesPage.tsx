@@ -1,6 +1,5 @@
 import { useSEO } from '../hooks/useSEO';
 import { PageWrapper } from '../components/PageWrapper';
-import { ServicesGallerySection } from './services/ServicesGallerySection';
 import { ServicesHeroSection } from './services/ServicesHeroSection';
 import { ServicesMatrixSection } from './services/ServicesMatrixSection';
 import { ServicesProcessSection } from './services/ServicesProcessSection';
@@ -13,7 +12,7 @@ export function ServicesPage() {
       'Lead generation page for ship registration, offshore corporate registration, mortgages, marine surveys, ISM & ISPS consultancy, statutory services, and crew support.',
     keywords:
       'maritime services, ship registration services, marine surveys, ism isps consultancy, statutory services, naval architecture, crew documentation, mlc inspections',
-    image: 'https://intertekgroup.org/img/IG%20PHOTOS/marine-inspection-030.jpeg',
+    image: 'https://intertekgroup.org/img/branding/intertek-group-mark.png',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
@@ -30,7 +29,6 @@ export function ServicesPage() {
         <ServicesMatrixSection />
         <ServicesScopeSection />
         <ServicesProcessSection />
-        <ServicesGallerySection />
       </PageWrapper>
     </div>
   );

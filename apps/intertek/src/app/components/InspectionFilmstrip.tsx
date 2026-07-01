@@ -1,7 +1,6 @@
 const images = [
   { src: '/img/IG PHOTOS/marine-inspection-002.jpeg', alt: 'Marine inspection' },
   { src: '/img/IG PHOTOS/marine-inspection-004.jpg', alt: 'Vessel survey' },
-  { src: '/img/IG PHOTOS/marine-inspection-007.jpeg', alt: 'Deck inspection' },
   { src: '/img/IG PHOTOS/marine-inspection-009.jpeg', alt: 'Hull survey' },
   { src: '/img/IG PHOTOS/marine-inspection-012.jpeg', alt: 'Inspection team' },
   { src: '/img/IG PHOTOS/marine-inspection-016.jpeg', alt: 'Port inspection' },

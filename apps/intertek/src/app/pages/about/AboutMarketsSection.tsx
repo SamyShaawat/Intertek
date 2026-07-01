@@ -1,6 +1,7 @@
 import { ScrollReveal } from '../../components/ScrollReveal';
 import { SectionKicker } from '../../components/SectionKicker';
 import { markets } from '../../data/siteContent';
+import { Card } from '@heroui/react';
 
 export function AboutMarketsSection() {
   return (

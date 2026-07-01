@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Card } from '@heroui/react';
 import { ScrollReveal } from '../../components/ScrollReveal';
 import { SectionKicker } from '../../components/SectionKicker';
 import { ServicePill } from '../../components/ServicePill';
@@ -9,14 +10,16 @@ export function HomeOverviewSection() {
   return (
     <ScrollReveal>
       <section className="grid gap-5 lg:grid-cols-[1fr_1fr]">
-        <div className="rounded-[2.25rem] border border-white/10 bg-white/[0.10] p-6 shadow-[0_16px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:p-8">
-          <SectionKicker text="What we do" />
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            {services.slice(0, 6).map((service) => (
-              <ServicePill key={service.title} title={service.title} category={service.category} />
-            ))}
-          </div>
-        </div>
+        <Card className="rounded-[2.25rem] border border-white/10 bg-white/[0.10] shadow-[0_16px_50px_rgba(0,0,0,0.25)] backdrop-blur-xl">
+          <Card.Content className="p-6 sm:p-8">
+            <SectionKicker text="What we do" />
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              {services.slice(0, 6).map((service) => (
+                <ServicePill key={service.title} title={service.title} category={service.category} />
+              ))}
+            </div>
+          </Card.Content>
+        </Card>
 
         <div className="overflow-hidden rounded-[2.25rem] border border-brand-navy/10 bg-brand-navy shadow-[0_20px_70px_rgba(10,28,52,0.16)]">
           <div className="grid h-full gap-0 lg:grid-cols-[0.95fr_1.05fr]">

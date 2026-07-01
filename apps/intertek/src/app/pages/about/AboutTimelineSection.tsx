@@ -7,7 +7,7 @@ const TIMELINE = [
     event: 'Founded in Panama City by a board of former flag state inspectors, IACS surveyors, maritime attorneys, and naval architects.',
   },
   {
-    year: '2011',
+    year: '2014',
     event: 'Expanded survey operations into the Middle East, Gulf, and Eastern Mediterranean.',
   },
   {

@@ -51,14 +51,18 @@ function App() {
       {/* Creative image background */}
       <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(160deg,#0c1320_0%,#102235_55%,#0a131d_100%)]" />
+        <div className="bg-live-sheen absolute inset-0 opacity-70" />
+        <div className="bg-live-orb-a absolute -top-28 -right-28 hidden h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(79,127,166,0.34)_0%,rgba(79,127,166,0.12)_40%,transparent_72%)] blur-3xl sm:block lg:-top-40 lg:-right-40 lg:h-[750px] lg:w-[750px]" />
+        <div className="bg-live-orb-b absolute -bottom-36 -left-36 hidden h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle,rgba(194,24,58,0.24)_0%,rgba(194,24,58,0.08)_42%,transparent_72%)] blur-3xl sm:block lg:-bottom-48 lg:-left-48 lg:h-[680px] lg:w-[680px]" />
+        <div className="bg-live-orb-c absolute top-1/2 -right-16 hidden h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.03)_48%,transparent_74%)] blur-3xl md:block lg:-right-24 lg:h-[420px] lg:w-[420px]" />
         <div className="absolute -top-28 -right-28 hidden h-[520px] w-[520px] overflow-hidden rounded-full opacity-[0.10] sm:block lg:-top-40 lg:-right-40 lg:h-[750px] lg:w-[750px]">
-          <img src="/img/IG PHOTOS/marine-inspection-026.jpg" alt="" className="h-full w-full object-cover" />
+          <img src="/img/IG PHOTOS/marine-inspection-026.jpg" alt="" className="hero-img-animate h-full w-full object-cover" />
         </div>
         <div className="absolute -bottom-36 -left-36 hidden h-[480px] w-[480px] overflow-hidden rounded-full opacity-[0.09] sm:block lg:-bottom-48 lg:-left-48 lg:h-[680px] lg:w-[680px]">
-          <img src="/img/IG PHOTOS/marine-inspection-030.jpeg" alt="" className="h-full w-full object-cover" />
+          <img src="/img/IG PHOTOS/marine-inspection-030.jpeg" alt="" className="hero-img-animate h-full w-full object-cover" />
         </div>
         <div className="absolute top-1/2 -right-16 hidden h-[320px] w-[320px] -translate-y-1/2 overflow-hidden rounded-full opacity-[0.07] md:block lg:-right-24 lg:h-[420px] lg:w-[420px]">
-          <img src="/img/IG PHOTOS/marine-inspection-018.jpeg" alt="" className="h-full w-full object-cover" />
+          <img src="/img/IG PHOTOS/marine-inspection-018.jpeg" alt="" className="hero-img-animate h-full w-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_45%_at_50%_0%,rgba(79,127,166,0.22),transparent)]" />
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-[radial-gradient(ellipse_60%_80%_at_15%_100%,rgba(192,137,98,0.08),transparent)]" />

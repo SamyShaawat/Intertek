@@ -5,7 +5,7 @@ export function SubsidiaryTile({ subsidiary }: { subsidiary: Subsidiary }) {
     <div className="group relative flex flex-col rounded-[1.5rem] border border-white/10 bg-white/[0.10] p-6 backdrop-blur-xl transition-all duration-300 hover:border-brand-red/30 hover:bg-white/[0.14]">
       <div className="mb-5 flex h-14 items-center overflow-hidden">
         <img
-          src={subsidiary.logo}
+          src={subsidiary.image ?? subsidiary.logo}
           alt={subsidiary.name}
           className="h-full w-auto max-w-[140px] object-contain"
         />

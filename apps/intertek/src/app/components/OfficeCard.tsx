@@ -7,7 +7,12 @@ export function OfficeCard({ office }: { office: Office }) {
       <Card.Content className="flex flex-col p-5">
         <div className="flex items-center gap-3">
           <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/14 p-1.5">
-            <img src="/img/branding/intertek-group-mark.png" alt="" aria-hidden="true" className="h-full w-full object-contain" />
+            <img
+              src={office.logo ?? '/img/branding/intertek-group-mark.png'}
+              alt=""
+              aria-hidden="true"
+              className="h-full w-full object-contain"
+            />
           </div>
           <div className="min-w-0">
             <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-brand-blue">{office.label}</p>
