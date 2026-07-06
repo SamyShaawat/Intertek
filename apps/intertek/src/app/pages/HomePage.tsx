@@ -11,18 +11,28 @@ import { HomeWhyIntertekSection } from './home/HomeWhyIntertekSection';
 
 export function HomePage() {
   useSEO({
-    title: "World's Premier Marine Specialist",
+    title: 'Intertek Group | Marine Registration, Surveys & Compliance',
     description:
       'Intertek Group delivers ship registration, marine surveys, ISM/ISPS compliance, and naval architecture from Panama, Canada, and the UAE.',
     keywords: 'marine registration, marine surveys, ISM ISPS, naval architecture, ship registration, Panama',
     image: 'https://intertekgroup.org/img/branding/intertek-group-mark.png',
-    schema: {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'Intertek Group',
-      description:
-        'Intertek Group delivers ship registration, marine surveys, ISM/ISPS compliance, and naval architecture from Panama, Canada, and the UAE.',
-    },
+    schema: [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'Intertek Group',
+        description:
+          'Intertek Group delivers ship registration, marine surveys, ISM/ISPS compliance, and naval architecture from Panama, Canada, and the UAE.',
+      },
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Intertek Group',
+        description:
+          'Intertek Group delivers ship registration, marine surveys, ISM/ISPS compliance, and naval architecture from Panama, Canada, and the UAE.',
+        logo: 'https://intertekgroup.org/img/branding/intertek-group-mark.png',
+      },
+    ],
   });
 
   return (

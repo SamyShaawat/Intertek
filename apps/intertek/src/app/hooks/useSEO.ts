@@ -27,7 +27,7 @@ export function useSEO({
   schema,
 }: SEOProps) {
   useEffect(() => {
-    document.title = `${title} | Intertek Group`;
+    document.title = title.includes('Intertek Group') ? title : `${title} | Intertek Group`;
     const canonicalUrl = new URL(canonicalPath || window.location.pathname, window.location.origin).toString();
 
     const updateMeta = (name: string, content: string) => {
