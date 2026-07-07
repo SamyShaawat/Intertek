@@ -7,7 +7,7 @@ import { ServicesScopeSection } from './services/ServicesScopeSection';
 
 export function ServicesPage() {
   useSEO({
-    title: 'Maritime Services | Ship Registration, Surveys & Compliance | Intertek Group',
+    title: 'Maritime Services | Ship Registration, Surveys & Compliance',
     description:
       'Lead generation page for ship registration, offshore corporate registration, mortgages, marine surveys, ISM & ISPS consultancy, statutory services, and crew support.',
     keywords:

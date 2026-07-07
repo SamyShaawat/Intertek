@@ -11,16 +11,16 @@ import { HomeWhyIntertekSection } from './home/HomeWhyIntertekSection';
 
 export function HomePage() {
   useSEO({
-    title: 'Intertek Group | Marine Registration, Surveys & Compliance',
+    title: 'Ship Registration, Marine Surveys & Compliance',
     description:
       'Intertek Group delivers ship registration, marine surveys, ISM/ISPS compliance, and naval architecture from Panama, Canada, and the UAE.',
-    keywords: 'marine registration, marine surveys, ISM ISPS, naval architecture, ship registration, Panama',
+    keywords: 'ship registration, marine surveys, ISM ISPS compliance, naval architecture, Intertek Group, Panama',
     image: 'https://intertekgroup.org/img/branding/intertek-group-mark.png',
     schema: [
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        name: 'Intertek Group',
+        name: 'Ship Registration, Marine Surveys & Compliance',
         description:
           'Intertek Group delivers ship registration, marine surveys, ISM/ISPS compliance, and naval architecture from Panama, Canada, and the UAE.',
       },

@@ -12,8 +12,8 @@ export function HomeHeroSection() {
         image="/img/IG PHOTOS/marine-inspection-026.jpg"
         imageAlt="Marine inspection and vessel branding scene"
         imagePosition="center 12%"
-        primaryLink={{ to: ROUTES.SERVICES, label: 'Explore services' }}
-        secondaryLink={{ to: ROUTES.CONTACT, label: 'Contact team' }}
+        primaryLink={{ to: ROUTES.SERVICES, label: 'Ship registration services' }}
+        secondaryLink={{ to: ROUTES.CONTACT, label: 'Contact marine team' }}
       />
       <InspectionFilmstrip />
     </>

@@ -6,7 +6,7 @@ import { ContactPresenceSection } from './contact/ContactPresenceSection';
 
 export function ContactPage() {
   useSEO({
-    title: 'Contact Intertek Group | Marine Surveyors & Registration Team',
+    title: 'Contact Intertek Group | Ship Registration & Marine Survey Team',
     description:
       'Reach Intertek Group offices in Panama City, Mississauga, and Dubai, with surveyor presence across core locations.',
     keywords: 'contact Intertek Group, Panama City, Mississauga, Dubai, marine surveyors, office locations',

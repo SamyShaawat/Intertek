@@ -7,10 +7,10 @@ import { AboutSubsidiariesSection } from './about/AboutSubsidiariesSection';
 
 export function AboutPage() {
   useSEO({
-    title: 'About Intertek Group | Marine Specialists Since 2006',
+    title: 'About Intertek Group | Marine Specialists, Flag State & IACS Expertise',
     description:
       'Founded in Panama in 2006, Intertek Group combines maritime law, survey work, and compliance services across Panama, Canada, and the UAE.',
-    keywords: 'Intertek Group, Panama, maritime law, marine surveyors, naval architecture, compliance',
+    keywords: 'Intertek Group, Panama, maritime law, marine surveyors, naval architecture, flag state, IACS',
     image: 'https://intertekgroup.org/img/branding/intertek-group-mark.png',
     schema: {
       '@context': 'https://schema.org',
